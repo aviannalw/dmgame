@@ -7,6 +7,13 @@ downkey = keyboard_check(vk_down);
 xspeed = (rightkey - leftkey) * movespeed; //value of right and left keys calculate the direction we're going
 yspeed = (downkey - upkey) * movespeed;
 
+//pause event
+if instance_exists(obj_pause_object) //makes the player pause when it hits the object, helpful for transitions
+{
+	xspeed = 0;
+	yspeed = 0;
+	}
+
 //set sprite
 mask_index = sprite[DOWN]; //the mask on the down sprite will aply to all sprites
 if yspeed == 0 
@@ -26,11 +33,11 @@ if yspeed < 0 && face == DOWN{face = UP};
 sprite_index = sprite[face]
 
 //collisions
-if place_meeting(x + xspeed, y, invisible_wall_object) == true //check player's position, and if there's a wall in the way stop them
+if place_meeting(x + xspeed, y, obj_invisible_wall) == true //check player's position, and if there's a wall in the way stop them
 	{
 		xspeed = 0;
 	}
-if place_meeting(x, y + yspeed, invisible_wall_object) == true //check player's position, and if there's a wall in the way stop them
+if place_meeting(x, y + yspeed, obj_invisible_wall) == true //check player's position, and if there's a wall in the way stop them
 	{
 		yspeed = 0;
 	}

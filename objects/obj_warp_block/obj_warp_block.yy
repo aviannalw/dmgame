@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "ram_object",
-  "eventList": [],
+  "name": "obj_warp_block",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -26,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "old_ram_sprite",
-    "path": "sprites/old_ram_sprite/old_ram_sprite.yy",
+    "name": "warp_sprite",
+    "path": "sprites/warp_sprite/warp_sprite.yy",
   },
   "spriteMaskId": null,
   "visible": true,
