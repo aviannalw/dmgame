@@ -3,3 +3,4 @@
 target_x = 176;
 target_y = 112;
 target_rm = open_world_room; //target room
+target_face = DOWN;
