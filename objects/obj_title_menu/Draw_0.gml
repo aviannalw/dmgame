@@ -5,7 +5,7 @@ draw_sprite_ext(sprite_index, image_index, x, y, width/sprite_width, height/spri
 
 
 //draw the options
-draw_set_font(Font_zig);
+draw_set_font(fnt_font_zig);
 draw_set_valign(fa_top);
 draw_set_halign(fa_left);
 
