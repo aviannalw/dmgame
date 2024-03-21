@@ -1,7 +1,7 @@
 {
   "resourceType": "GMFont",
   "resourceVersion": "1.0",
-  "name": "Font_zig",
+  "name": "fnt_font_zig",
   "AntiAlias": 1,
   "applyKerning": 0,
   "ascender": 11,
