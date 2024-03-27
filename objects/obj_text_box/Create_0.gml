@@ -16,8 +16,21 @@ page = 0;
 page_number = 0; //variables have to be initalized in the create event
 text[0] = "";
 text_length[0] = string_length(text[0]); //length of array
+char[0, 0] = ""; //a two dimensional string array, character number on the page, and the page itself
+char_x[0, 0] = 0;
+char_y[0, 0] = 0;
 draw_char = 0; //how many characters are drawn initially, creates a typewriter effect
 text_spd = 1; //going to be added to the draw_char variable
+//options
+option[0] = ""; //declare the array as a string type
+option_link_id[0] = -1;
+option_pos = 0;
+option_number = 0;
 
 
 setup = false; //checks if setup has been done, and if not then run the setup code
+
+
+//effects
+scr_set_defaults_for_text();
+last_free_space = 0; //keeps track of where the last word ends
