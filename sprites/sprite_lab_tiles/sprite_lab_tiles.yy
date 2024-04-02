@@ -4,7 +4,7 @@
   "name": "sprite_lab_tiles",
   "bbox_bottom": 63,
   "bbox_left": 0,
-  "bbox_right": 47,
+  "bbox_right": 63,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,

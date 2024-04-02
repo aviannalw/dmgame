@@ -4,7 +4,7 @@
   "name": "landscape_tiles",
   "bbox_bottom": 287,
   "bbox_left": 0,
-  "bbox_right": 156,
+  "bbox_right": 207,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
