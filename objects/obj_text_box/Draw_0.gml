@@ -12,11 +12,11 @@ if setup == false
 		draw_set_halign(fa_left); //sets the vertical and horizontal alignment of the text
 		
 //loop through the pages
-		for(var p =0; p < page_number; p++) //if the length of the page number is less than p, add 1
+		for(var p = 0; p < page_number; p++) //if the length of the page number is less than p, add 1
 			{
 				//find how many characters are on each page and store that number in the text_length array
 				text_length[p] = string_length(text[p]);
-				//get the x position for the text bos
+				//get the x position for the text box
 					//no character (center the textbox)
 				text_x_offset[p] = 44; //distance from the left sde of the screen that the text box is
 				

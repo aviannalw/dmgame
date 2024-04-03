@@ -33,5 +33,5 @@
     "path": "sprites/warp_sprite/warp_sprite.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

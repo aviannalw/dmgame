@@ -1,3 +1,4 @@
+alarm[0] = room_speed * 2;
 //display properties
 ideal_width = 0;
 ideal_height = 256; //i'll have to mess around with this

@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rocket_piece",
-    "path": "sprites/spr_rocket_piece/spr_rocket_piece.yy",
+    "name": "spr_ladder_piece",
+    "path": "sprites/spr_ladder_piece/spr_ladder_piece.yy",
   },
   "spriteMaskId": null,
   "visible": true,
