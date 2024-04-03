@@ -1,9 +1,9 @@
 depth = -9999 //textbox will show up on top of things
 
 //text box parameters
-text_box_width = 252; //change these to change the dimension of the text box
+text_box_width = 511; //change these to change the dimension of the text box
 text_box_height = 64;
-border = 8; //space from the edges of the box
+border = 8; //space from the edges of the box that the text will have
 line_sep = 12; //vertical separation between text lines
 line_width = text_box_width - border*2;
 text_box_spr = spr_text_box;

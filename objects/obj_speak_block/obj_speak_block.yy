@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_speak_block",
-    "path": "sprites/spr_speak_block/spr_speak_block.yy",
+    "name": "spr_mechanic",
+    "path": "sprites/spr_mechanic/spr_mechanic.yy",
   },
   "spriteMaskId": null,
   "visible": true,

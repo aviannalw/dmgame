@@ -8,3 +8,6 @@ sprite[LEFT] = spr_ram_left;
 sprite[DOWN] = spr_ram_down;
 
 face = DOWN; //how the player will face at the beginning
+
+//this is circumventing the inventory system with the ladders
+ladders = 0;
