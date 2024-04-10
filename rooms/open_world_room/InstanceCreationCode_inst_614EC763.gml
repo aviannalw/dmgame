@@ -1,1 +1,1 @@
-text_id = "rocket piece 1";
+text_id = "mechanic";

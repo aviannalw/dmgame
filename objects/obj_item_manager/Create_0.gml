@@ -65,6 +65,24 @@ ladder: new create_item(
 	}
 				
 	
+),
+pi_paper: new create_item(
+		
+		"PI Paper",
+		"Looks like your PI left instructions...",
+		spr_pi_paper,
+		false,
+		function () {}
+
+),
+blueprint: new create_item(
+		
+		"Rocket Blueprints",
+		"View Progress/Level Select",
+		spr_blueprint,
+		false,
+		function () {}
+
 )
 }
 //create the inventory

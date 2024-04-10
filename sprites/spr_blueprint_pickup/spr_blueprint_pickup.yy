@@ -1,11 +1,11 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "Sprite10",
-  "bbox_bottom": 35,
-  "bbox_left": 24,
-  "bbox_right": 37,
-  "bbox_top": 23,
+  "name": "spr_blueprint_pickup",
+  "bbox_bottom": 24,
+  "bbox_left": 0,
+  "bbox_right": 25,
+  "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3c82baff-fb2d-4d98-aa7c-4e2c3a193447",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"121f0070-d252-43ad-bed4-71516b60b504",},
   ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 64,
+  "gridX": 4,
+  "gridY": 4,
+  "height": 25,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ca853def-0890-4f79-b4fc-3291feb953c2","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1a157aa3-5a37-4fb9-9f5c-866289b7ce0c","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "Sprite10",
+    "name": "spr_blueprint_pickup",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3c82baff-fb2d-4d98-aa7c-4e2c3a193447","path":"sprites/Sprite10/Sprite10.yy",},},},"Disabled":false,"id":"3ffd0616-26c7-48f7-95c4-74fef195aede","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"121f0070-d252-43ad-bed4-71516b60b504","path":"sprites/spr_blueprint_pickup/spr_blueprint_pickup.yy",},},},"Disabled":false,"id":"a673ad81-3543-43c0-822f-a2e080e0e150","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 26,
 }
