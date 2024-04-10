@@ -21,4 +21,7 @@ if selected_item != -1 //makes sure something is selected
 		{
 			inv[selected_item].effect(); //does the effect
 		}
+		//drop the item
+	if mouse_check_button_pressed(mb_right) && inv[selected_item].can_drop == true // could also use the keyboard
+	{array_delete(inv, selected_item, 1);} //get rid of the item only if it's a droppable item
 }

@@ -4,11 +4,12 @@ depth = -9999;
 
 
 //make an item constructor, which is a template
-function create_item(_name, _desc, _spr, _effect) constructor //these are argument variables
+function create_item(_name, _desc, _spr, _candrop, _effect) constructor //these are argument variables
 {
 	name = _name;//these are the actual variables
 	description = _desc;
 	sprite = _spr;
+	can_drop = _candrop; //a variable that tells us whether or not you can drop it; is it a key item?
 	effect = _effect;
 	
 }
@@ -25,6 +26,7 @@ rocket_piece: new create_item(
 	//commas separate variables in structs
 	"A piece of the rocket wing. Find all six!",
 	spr_rocket_piece,
+	true,
 	
 	//this function is specific to this item, it's the effect the item has
 	function()
@@ -42,9 +44,10 @@ ladder: new create_item(
 	"Ladder",
 	"Used to climb cliffs.",
 	spr_ladder_piece,
+	false, //cannot drop this item
 	function ()
 	{
-		var _used = false;
+		var _used = false; //makes it a single-use item
 		if instance_exists(obj_ivy_wall_block) //check to see if there are any of these in the room
 			{
 				with(obj_ivy_wall_block) //okay if there are, if the player is within 10 px, then the object destroys itself
