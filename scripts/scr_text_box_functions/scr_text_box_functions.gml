@@ -3,7 +3,7 @@ function scr_set_defaults_for_text () {
 	line_break_num[page_number] = 0; //keeps tracks of number of line breaks we have while we are looping through the pages
 	line_break_offset[page_number] = 0; //keeps track of width in pixels that we need to reset each character's position
 	//a sound function 
-	//snd[page_number] = audio_sound_pitch(snd[page], random_range(0.8, 1.2));
+	snd[page_number] = snd_short_character_speech_mixdown;
 }
 
 /// @param text

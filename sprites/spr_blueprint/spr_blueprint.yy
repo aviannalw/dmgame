@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_blueprint",
-  "bbox_bottom": 63,
+  "bbox_bottom": 7,
   "bbox_left": 0,
-  "bbox_right": 63,
+  "bbox_right": 7,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ba04068f-d193-4a13-94dd-fda519437c43",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3c82baff-fb2d-4d98-aa7c-4e2c3a193447",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 8,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9195ec49-33df-4d2d-92b2-2dcf5cf7d16a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ca853def-0890-4f79-b4fc-3291feb953c2","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ba04068f-d193-4a13-94dd-fda519437c43","path":"sprites/spr_blueprint/spr_blueprint.yy",},},},"Disabled":false,"id":"e0e34e53-9ac2-42db-93b3-ad9e22a54560","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3c82baff-fb2d-4d98-aa7c-4e2c3a193447","path":"sprites/spr_blueprint/spr_blueprint.yy",},},},"Disabled":false,"id":"3ffd0616-26c7-48f7-95c4-74fef195aede","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 8,
 }

@@ -89,16 +89,19 @@ if text_pause_timer <= 0
 				if _check_char == "." || _check_char == "!" || _check_char == "?" || _check_char == "," // || is the or operator
 					{
 						text_pause_timer = text_pause_time;
+						audio_stop_sound(snd[page]);
+						if !audio_is_playing(snd[page]) { audio_play_sound(snd[page], 8, false);}
 					} else {
-					/*	//typing sound
+					//typing sound
 						if snd_count < snd_delay {
 							snd_count++;
 							} else {
 								snd_count = 0;
 								audio_play_sound(snd[page], 8, false); //priority is the precednet of what sounds come on top of other ones
+								//audio_stop_sound(snd[page]);
 								}
 						}
-			} */
+			}
 }	 else {
 	text_pause_timer --;
 }
