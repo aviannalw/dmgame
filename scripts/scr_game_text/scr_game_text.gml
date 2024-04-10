@@ -64,6 +64,12 @@ switch(_text_id) {
 			scr_text("Here you go!");
 		break;
 		
+		
+		
+		
+		case"researcher":
+		scr_text("hey, can I look at your blueprints?");
+		break;
 }
 
 }

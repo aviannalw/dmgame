@@ -1,0 +1,1 @@
+obj_character.text_id = "researcher";
