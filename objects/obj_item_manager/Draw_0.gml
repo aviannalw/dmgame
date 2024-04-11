@@ -1,4 +1,4 @@
-draw_set_font(fnt_font_zig);
+draw_set_font(fnt_iconic);
 
 for ( var i = 0; i < array_length(inv); i++)
 {
