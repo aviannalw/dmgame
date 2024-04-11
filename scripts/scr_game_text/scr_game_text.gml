@@ -16,7 +16,7 @@ switch(_text_id) {
 			scr_text("aw, you picked no :(");
 			break;
 	
-	
+//--------------LEVEL 1-----------------//	
 	case"mechanic":
 		scr_text("Hi! Your PI told me you might need some help with a rocket ship.");
 		scr_text("Tell me about your data and I'll engrave one of these rocket bodies.");
@@ -64,6 +64,46 @@ switch(_text_id) {
 			scr_text("Here you go!");
 		break;
 		
+//--------------LEVEL 2-----------------//
+		case"researcher":
+		scr_text("hey, can I look at your blueprints?");
+		break;
+		
+		
+		
+//--------------LEVEL 3-----------------//
+		case"rp1":
+		scr_text("1/6: important information.");
+		scr_text("find the next piece in the northern flower field");
+		break;
+		
+		case"rp2":
+		scr_text("2/6: more info girlipop.");
+		scr_text("are you writing this down?");
+		scr_text("find the next piece behind the lab");
+		break;
+		
+		case"rp3":
+		scr_text("3/6: aw, you found me. anyway you need to know that...");
+		scr_text("and this too...");
+		scr_text("find the next piece on the southwest beach");
+		break;
+		
+		case"rp4":
+		scr_text("4/6: a really good fact.");
+		scr_text("find the next piece in the trees, maybe add an axe to the inventory to cut down a specific tree");
+		break;
+		
+		case"rp5":
+		scr_text("5/6: more info, hooray");
+		scr_text("find the last piece between the cliffs/with the guy on the beach");
+		break;
+		
+		case"rp6":
+		scr_text("6/6: last piece of info...");
+		scr_text("you did it! let's add the wing to your inventory!");
+		scr_text("go up the cliffs to the telescope");
+		break;
 }
 
 }
