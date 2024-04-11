@@ -32,10 +32,15 @@ rocket_piece: new create_item(
 	function()
 		{
 				//obj_player_ram.score +=10; //increases the player's total score by 10 points
-				//create an if statement here to delete the item once all six rocket pieces have been collected to turn ino the third part
-				array_delete (inv, selected_item, 1)
-				//coud be also used with the ladder item
+			//	var _count = 0;
+			//	_count ++;
+			//	if have = true && _count = 2
+			//	{
+				array_delete(inv, selected_item, 1)
+				
 		}
+				//coud be also used with the ladder item
+				
 	
 	),
 
@@ -81,9 +86,20 @@ blueprint: new create_item(
 		"View Progress/Level Select",
 		spr_blueprint,
 		false,
-		function () {}
+		function () {}//this is where you add a functionality to the blueprints
 
 )
+/*,
+info_pickup: new create_item(
+		
+		"",
+		"",
+		spr_info,
+		true,
+		function ()
+		{
+		}
+)*/
 }
 //create the inventory
 
