@@ -7,7 +7,7 @@ text_box_y = camera_get_view_y(view_camera[0]) + 144; //dialogue box will be 12 
 if setup == false
 	{
 		setup = true;
-		draw_set_font(fnt_font_zig);
+		draw_set_font(fnt_iconic);
 		draw_set_valign(fa_top);
 		draw_set_halign(fa_left); //sets the vertical and horizontal alignment of the text
 		
