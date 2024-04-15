@@ -104,6 +104,64 @@ switch(_text_id) {
 		scr_text("you did it! let's add the wing to your inventory!");
 		scr_text("go up the cliffs to the telescope");
 		break;
+		
+//--------------LEVEL 4-----------------//	
+		case"planet_1":
+		scr_text("Name: Planet One         Storage: Up to 2 TB.");
+		scr_text("Sensitivity: Accepts De-Identified Human Subject Data.         Cost: Free up to 2TB.");
+		scr_text("Choose this repository planet?");
+		scr_option("yes", "planet_1 selected");
+		scr_option("No", "planet_1 unselected");
+		break;
+		
+		case"planet_1 selected":
+		scr_text("Your space data won't fit here! Try again.");
+		break;
+		
+		case"planet_1 unselected":
+		scr_text("You did not choose this planet.");
+		break;
+		
+		case"planet_2":
+		scr_text("Name: Planet Two         Storage: Up to 10 TB.");
+		scr_text("Sensitivity: Not Suitable for Human Subject Data.         Cost: 1 Million Credits.");
+		scr_text("Choose this repository planet?");
+		scr_option("yes", "planet_2 selected");
+		scr_option("No", "planet_2 unselected");
+		break;
+		
+		case"planet_2 selected":
+		scr_text("You don't have the budget for that!");
+		break;
+		
+		case"planet_2 unselected":
+		scr_text("You did not choose this planet.");
+		break;
+		
+		case"planet_3":
+		scr_text("Name: Planet Three       Storage: Up to 5PB.");
+		scr_text("Sensitivity: Accepts All Data.                Cost: Free.");
+		scr_text("Choose this repository planet?");
+		scr_option("yes", "planet_3 selected");
+		scr_option("No", "planet_3 unselected");
+		break;
+		
+		case"planet_3 selected":
+		scr_text("Great choice!");
+		break;
+		
+		case"planet_3 unselected":
+		scr_text("You did not choose this planet.");
+		break;
+		
+		
+		
+//--------------LEVEL 5-----------------//	
+		case"govguy":
+		scr_text("What?");
+		scr_text("What do you want? Is it rocket stuff?");
+		scr_text("*sigh* It's more rocket stuff, isn't it?");
+		break;
 }
 
 }
