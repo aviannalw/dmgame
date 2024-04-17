@@ -20,7 +20,7 @@ global.item_list = //this struct will contain all the items and their structs
 {
 	
 
-rocket_piece: new create_item(
+rocket_piece: new create_item(  //i don't think this item is being used
 
 	"Rocket piece",
 	//commas separate variables in structs

@@ -8,4 +8,4 @@
 // Inherit the parent event
 event_inherited();
 
-room_goto(lab_room); //make first starting room
+room_goto(room_last);
