@@ -21,7 +21,8 @@ switch(_text_id) {
 		scr_text("Hi! Your PI told me you might need some help with a rocket ship.");
 		scr_text("Tell me about your data and I'll engrave one of these rocket bodies.");
 		scr_text("What kind of data do you have?");
-			scr_option("moon data", "mechanic - moon data");
+				if scr_option("moon data", "mechanic - moon data") = true && mouse_check_button_pressed(mb_left)
+					{obj_player_ram.lives --;}
 			scr_option("space data", "mechanic - space data");
 			scr_option("not sure", "mechanic - not sure");
 		break;
