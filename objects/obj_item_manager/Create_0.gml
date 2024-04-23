@@ -1,7 +1,7 @@
 depth = -9999;
 //create the items with structs
 //structs are like objects, and they have their own variables
-
+has_pi_paper = false;
 
 //make an item constructor, which is a template
 function create_item(_name, _desc, _spr, _candrop, _effect) constructor //these are argument variables
@@ -20,25 +20,16 @@ global.item_list = //this struct will contain all the items and their structs
 {
 	
 
-rocket_piece: new create_item(  //i don't think this item is being used
+rocket_body: new create_item(
 
-	"Rocket piece",
+	"Rocket Body",
 	//commas separate variables in structs
-	"A piece of the rocket wing. Find all six!",
-	spr_rocket_piece,
-	true,
+	"The Rocket Body. Collect all six rocket pieces!",
+	spr_rocket_body,
+	false,
 	
 	//this function is specific to this item, it's the effect the item has
-	function()
-		{
-				//obj_player_ram.score +=10; //increases the player's total score by 10 points
-			//	var _count = 0;
-			//	_count ++;
-			//	if have = true && _count = 2
-			//	{
-				array_delete(inv, selected_item, 1)
-				
-		}
+	
 				//coud be also used with the ladder item
 				
 	
@@ -77,16 +68,18 @@ pi_paper: new create_item(
 		"Looks like your PI left instructions...",
 		spr_pi_paper,
 		false,
-		function () {}
+		function () {has_pi_paper = true;}
 
 ),
 blueprint: new create_item(
 		
 		"Rocket Blueprints",
-		"View Progress/Level Select",
+		"View Progress",
 		spr_blueprint,
 		false,
-		function () {}//this is where you add a functionality to the blueprints
+		function () {}
+			
+//this is where you add a functionality to the blueprints
 
 )
 /*,
