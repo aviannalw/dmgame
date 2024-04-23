@@ -120,6 +120,7 @@
     {"name":"inst_2906FCA5","path":"rooms/open_world_room/open_world_room.yy",},
     {"name":"inst_6DD8E013","path":"rooms/open_world_room/open_world_room.yy",},
     {"name":"inst_6D7DD6CC","path":"rooms/open_world_room/open_world_room.yy",},
+    {"name":"inst_100EB070","path":"rooms/open_world_room/open_world_room.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -243,6 +244,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1AB83A14","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_telescope","path":"objects/obj_telescope/obj_telescope.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":904.0,"y":107.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2906FCA5","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":0.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_warp_block","path":"objects/obj_warp_block/obj_warp_block.yy",},"properties":[],"rotation":0.0,"scaleX":0.359375,"scaleY":0.390625,"x":901.0,"y":107.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6D7DD6CC","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":5,"imageSpeed":0.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_overworld_item","path":"objects/obj_overworld_item/obj_overworld_item.yy",},"properties":[],"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":205.0,"y":376.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_100EB070","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":6,"imageSpeed":0.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_overworld_item","path":"objects/obj_overworld_item/obj_overworld_item.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":432.0,"y":564.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"overworld_tiles","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":50,"SerialiseWidth":100,"TileCompressedData":[
 -310,2,-6,113,-90,2,-11,113,-88,2,-11,113,-2,115,-87,2,-10,113,2,115,113,-4,115,-84,2,-5,113,-2,1073741921,-2,113,1,115,-3,113,-6,115,-22,2,-15,9,-44,2,2,113,115,-3,113,-2,1073741921,-4,113,-10,115,-10,2,-25,9,-3,2,-8,9,-10,2,-8,9,-15,2,-5,113,-2,1073741921,-5,113,-11,115,-6,2,-26,9,3,26,2,2,-28,9,-14,2,-2,26,-3,113,2,1073741921,146,-6,113,-14,115,-27,

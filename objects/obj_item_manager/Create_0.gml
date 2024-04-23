@@ -24,16 +24,128 @@ rocket_body: new create_item(
 
 	"Rocket Body",
 	//commas separate variables in structs
-	"The Rocket Body. Collect all six rocket pieces!",
+	"The Rocket Body. Click to combine!",
 	spr_rocket_body,
 	false,
 	
 	//this function is specific to this item, it's the effect the item has
 	
 				//coud be also used with the ladder item
-				
+	function ()
+		{
+			if array_contains(inv, global.item_list.rocket_window)
+			//inv selected item equals rocket body and rocket window exists in inventory, then "combine" the objects into the new sprite
+			{
+			array_delete(inv, selected_item, 1);
+			array_insert(inv, selected_item, global.item_list.rocket_body_window); // "combines" the objects visually, replaces it with the new sprite
+			array_delete(inv, array_get_index(inv, global.item_list.rocket_window), 1);
+			}
+		}	 
 	
 	),
+
+rocket_window: new create_item(
+		"Rocket Window",
+		"The Rocket Window. Click to combine!",
+		spr_rocket_window, //not the right sprite
+		false,
+		function ()
+		{
+			if array_contains(inv, global.item_list.rocket_body)
+			
+			{
+			array_delete(inv, selected_item, 1);
+			array_insert(inv, selected_item, global.item_list.rocket_body_window);
+			array_delete(inv, array_get_index(inv, global.item_list.rocket_body), 1);
+			}
+		}
+		
+		),
+	
+	
+rocket_body_window: new create_item(
+		
+		"Partial Rocket: 2/6",
+		"The Rocket Body and Window.",
+		spr_rocket_body_window,
+		false,
+		function () {}
+		),	
+		
+rocket_left_wing: new create_item(
+		
+		"Partial Rocket: 2/6",
+		"The Rocket Body and Window.",
+		spr_rocket_body_window,
+		false,
+		function () {}
+		),	
+	
+rocket_body_window_wing: new create_item(
+		
+		"Partial Rocket: 2/6",
+		"The Rocket Body and Window.",
+		spr_rocket_body_window,
+		false,
+		function () {}
+		),	
+		
+rocket_engine: new create_item(
+		
+		"Partial Rocket: 2/6",
+		"The Rocket Body and Window.",
+		spr_rocket_body_window,
+		false,
+		function () {}
+		),	
+		
+		
+rocket_body_window_wing_engine: new create_item(
+		
+		"Partial Rocket: 2/6",
+		"The Rocket Body and Window.",
+		spr_rocket_body_window,
+		false,
+		function () {}
+		),	
+		
+		
+rocket_right_wing: new create_item(
+		
+		"Partial Rocket: 2/6",
+		"The Rocket Body and Window.",
+		spr_rocket_body_window,
+		false,
+		function () {}
+		),	
+		
+rocket_body_window_wing_engine_wing: new create_item(
+		
+		"Partial Rocket: 2/6",
+		"The Rocket Body and Window.",
+		spr_rocket_body_window,
+		false,
+		function () {}
+		),	
+
+rocket_cone: new create_item(
+		
+		"Partial Rocket: 2/6",
+		"The Rocket Body and Window.",
+		spr_rocket_body_window,
+		false,
+		function () {}
+		),	
+		
+rocket_complete: new create_item(
+		
+		"Partial Rocket: 2/6",
+		"The Rocket Body and Window.",
+		spr_rocket_body_window,
+		false,
+		function () {}
+		),	
+
 
 ladder: new create_item(
 
