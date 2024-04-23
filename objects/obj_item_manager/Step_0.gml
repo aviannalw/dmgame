@@ -3,8 +3,8 @@
 selected_item = -1;
 for ( var i = 0; i < array_length(inv); i++)
 {
-	var _xx = camera_get_view_x(view_camera[0]) +screen_bord;
-	var _yy = camera_get_view_y(view_camera[0])+screen_bord + sep*i; //separation between items
+	var _xx = camera_get_view_x(view_camera[0]) +screen_bord + sep*i; //separation between items
+	var _yy = camera_get_view_y(view_camera[0])+screen_bord; 
 
 //x and y position checks for the mouse to select an item
 if mouse_x > _xx && mouse_x < _xx+8 && mouse_y > _yy && mouse_y < _yy+8 //8 has to do with the width of the sprite, basically this makes a hitbox for the sprite so we can click on it
@@ -25,3 +25,4 @@ if selected_item != -1 //makes sure something is selected
 	if mouse_check_button_pressed(mb_right) && inv[selected_item].can_drop == true // could also use the keyboard
 	{array_delete(inv, selected_item, 1);} //get rid of the item only if it's a droppable item
 }
+

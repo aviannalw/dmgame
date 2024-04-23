@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "Sprite36",
-  "bbox_bottom": 0,
+  "name": "spr_rocket_blueprint",
+  "bbox_bottom": 215,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 287,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,18 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd53beca-036c-4e5e-8631-4c826e10c7c9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aeed1b3b-1e26-4157-a762-9abe354c2a4f",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 216,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"994c1c44-2c7a-44a1-a346-966dc8d8d93d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"087286cf-607d-4303-8c9f-7879408ad158","blendMode":0,"displayName":"Layer 3","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9befdae9-0c1b-4d10-9937-aebd537c90f2","blendMode":0,"displayName":"Layer 4","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ead5338c-1fe4-4855-bb33-568d4eb33385","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":false,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"dc822679-3742-41c2-85d1-0f34683f6c3c","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e468f4df-92d8-4644-a42c-a847d60068fb","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +36,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "Sprite36",
+    "name": "spr_rocket_blueprint",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +58,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cd53beca-036c-4e5e-8631-4c826e10c7c9","path":"sprites/Sprite36/Sprite36.yy",},},},"Disabled":false,"id":"7fc0366b-f2b5-4aed-bd03-14c9df66f316","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"aeed1b3b-1e26-4157-a762-9abe354c2a4f","path":"sprites/spr_rocket_blueprint/spr_rocket_blueprint.yy",},},},"Disabled":false,"id":"84cfc69e-9652-435e-ae56-d52250d08d8c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +74,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 288,
 }

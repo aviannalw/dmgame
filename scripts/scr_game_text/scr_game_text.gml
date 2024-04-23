@@ -1,6 +1,12 @@
 
 function scr_game_text(_text_id){ //how to get different characters to say different things, could also be used for items?
 
+//hide the rocket body
+instance_deactivate_object(inst_6D7DD6CC);
+talked_to_mechanic = false;
+mechanic_count = 0;
+
+
 switch(_text_id) {
 	case"NPC 1"://to make a new thing that talks, add a new case and put the id in the instance creation code in the room
 		scr_text("Hi! I'm NPC 1");
@@ -17,11 +23,12 @@ switch(_text_id) {
 			break;
 	
 //--------------LEVEL 1-----------------//	
+	
 	case"mechanic":
 		scr_text("Hi! Your PI told me you might need some help with a rocket ship.");
 		scr_text("Tell me about your data and I'll engrave one of these rocket bodies.");
 		scr_text("What kind of data do you have?");
-			scr_option("moon data", "mechanic - moon data");
+			scr_option("moon data", "mechanic - moon data")
 			scr_option("space data", "mechanic - space data");
 			scr_option("not sure", "mechanic - not sure");
 		break;
@@ -62,6 +69,16 @@ switch(_text_id) {
 			scr_text("Thanks. That's really helpful.");
 			scr_text("Well, let me get you settled. One second and I'll engrave this rocket body for you.");
 			scr_text("Here you go!");
+			if talked_to_mechanic = false && mechanic_count = 0 {
+				instance_activate_object(inst_6D7DD6CC);
+				talked_to_mechanic = true;
+				mechanic_count ++;
+				//get mechanic to move out of the way???
+			}
+		break;
+		
+		case"mechanic thanks":
+			scr_text("Thanks for coming! I'm sure you have more pieces to find...");
 		break;
 		
 //--------------LEVEL 2-----------------//
