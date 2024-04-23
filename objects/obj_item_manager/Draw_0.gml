@@ -28,8 +28,15 @@ draw_set_color(c_white); //resets the color back to white so we don't mess up th
 
 if has_pi_paper = true {
 		draw_sprite_ext(spr_pi_paper_full, 0, camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), 1, 1, 0, c_white, 1);
-		if mouse_check_button_pressed(mb_left)
-		{instance_deactivate_region(20, 20, 200, 200, true, true);}
+		if mouse_check_button_released(mb_left)
+		{has_pi_paper = false;}
+		
+}
+
+if has_blueprint = true {
+		draw_sprite_ext(spr_rocket_blueprint, 0, camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), 1, 1, 0, c_white, 1);
+		if mouse_check_button_released(mb_left)
+		{has_blueprint = false;}
 		
 }
 	

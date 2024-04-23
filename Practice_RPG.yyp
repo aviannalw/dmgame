@@ -85,6 +85,7 @@
     {"id":{"name":"obj_button_resume","path":"objects/obj_button_resume/obj_button_resume.yy",},},
     {"id":{"name":"obj_button_start","path":"objects/obj_button_start/obj_button_start.yy",},},
     {"id":{"name":"spr_pi_paper","path":"sprites/spr_pi_paper/spr_pi_paper.yy",},},
+    {"id":{"name":"spr_rocket_blueprint","path":"sprites/spr_rocket_blueprint/spr_rocket_blueprint.yy",},},
     {"id":{"name":"full_tile_set","path":"tilesets/full_tile_set/full_tile_set.yy",},},
     {"id":{"name":"fnt_iconic","path":"fonts/fnt_iconic/fnt_iconic.yy",},},
     {"id":{"name":"sprite_lab_tiles","path":"sprites/sprite_lab_tiles/sprite_lab_tiles.yy",},},

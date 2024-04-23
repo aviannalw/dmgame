@@ -2,7 +2,7 @@ depth = -9999;
 //create the items with structs
 //structs are like objects, and they have their own variables
 has_pi_paper = false;
-
+has_blueprint = false;
 //make an item constructor, which is a template
 function create_item(_name, _desc, _spr, _candrop, _effect) constructor //these are argument variables
 {
@@ -77,7 +77,7 @@ blueprint: new create_item(
 		"View Progress",
 		spr_blueprint,
 		false,
-		function () {}
+		function () {has_blueprint = true;}
 			
 //this is where you add a functionality to the blueprints
 
