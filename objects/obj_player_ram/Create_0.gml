@@ -2,7 +2,7 @@ xspeed = 0;
 yspeed = 0;
 movespeed = 1;
 lives = 3;
-score = 0;
+score = 17;
 
 sprite[RIGHT] = spr_ram_right; //an array has brackets, starts at 0 because RIGHT does and arrays start at 0
 sprite[UP] = spr_ram_up;

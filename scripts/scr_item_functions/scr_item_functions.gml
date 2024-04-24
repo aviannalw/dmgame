@@ -2,6 +2,7 @@
 
 function item_add(_item) //item is the argument that we need
 {
+	score +=10;
 	var _added = false;
 	if array_length(obj_item_manager.inv) < obj_item_manager.inv_max //limit the items in the inventory
 	{

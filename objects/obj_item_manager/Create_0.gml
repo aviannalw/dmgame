@@ -47,7 +47,7 @@ rocket_body: new create_item(
 rocket_window: new create_item(
 		"Rocket Window",
 		"The Rocket Window. Click to combine!",
-		spr_rocket_window, //not the right sprite
+		spr_rocket_window,
 		false,
 		function ()
 		{
@@ -74,37 +74,55 @@ rocket_body_window: new create_item(
 		
 rocket_left_wing: new create_item(
 		
-		"Partial Rocket: 2/6",
-		"The Rocket Body and Window.",
-		spr_rocket_body_window,
+		"Rocket Wing",
+		"The Left Wing of the Rocket. Click to Combine!",
+		spr_rocket_piece,
 		false,
-		function () {}
+		function () 
+		{
+			if array_contains(inv, global.item_list.rocket_body_window)
+			
+			{
+			array_delete(inv, selected_item, 1);
+			array_insert(inv, selected_item, global.item_list.rocket_body_window_wing);
+			array_delete(inv, array_get_index(inv, global.item_list.rocket_body_window), 1);
+			}
+		}
 		),	
 	
 rocket_body_window_wing: new create_item(
 		
-		"Partial Rocket: 2/6",
-		"The Rocket Body and Window.",
-		spr_rocket_body_window,
+		"Partial Rocket: 3/6",
+		"The Half-Completed Rocket.",
+		spr_rocket_body_window_wing,
 		false,
 		function () {}
 		),	
 		
 rocket_engine: new create_item(
 		
-		"Partial Rocket: 2/6",
-		"The Rocket Body and Window.",
-		spr_rocket_body_window,
+		"Rocket Thruster",
+		"The Rocket Thruster. Click to Combine!",
+		spr_rocket_engine,
 		false,
-		function () {}
+		function () 
+		{
+			if array_contains(inv, global.item_list.rocket_body_window_wing)
+			
+			{
+			array_delete(inv, selected_item, 1);
+			array_insert(inv, selected_item, global.item_list.rocket_body_window_wing_engine);
+			array_delete(inv, array_get_index(inv, global.item_list.rocket_body_window_wing), 1);
+			}
+		}
 		),	
 		
 		
 rocket_body_window_wing_engine: new create_item(
 		
-		"Partial Rocket: 2/6",
-		"The Rocket Body and Window.",
-		spr_rocket_body_window,
+		"Partial Rocket: 4/6.",
+		"Most of a Rocket.",
+		spr_rocket_body_window_wing_engine,
 		false,
 		function () {}
 		),	
@@ -112,18 +130,27 @@ rocket_body_window_wing_engine: new create_item(
 		
 rocket_right_wing: new create_item(
 		
-		"Partial Rocket: 2/6",
-		"The Rocket Body and Window.",
-		spr_rocket_body_window,
+		"Rocket Wing",
+		"The Right Wing of the Rocket. Click to Combine!",
+		spr_rocket_piece,
 		false,
-		function () {}
+		function () 
+		{
+			if array_contains(inv, global.item_list.rocket_body_window_wing_engine)
+			
+			{
+			array_delete(inv, selected_item, 1);
+			array_insert(inv, selected_item, global.item_list.rocket_body_window_wing_engine_wing);
+			array_delete(inv, array_get_index(inv, global.item_list.rocket_body_window_wing_engine), 1);
+			}
+		}
 		),	
 		
 rocket_body_window_wing_engine_wing: new create_item(
 		
-		"Partial Rocket: 2/6",
-		"The Rocket Body and Window.",
-		spr_rocket_body_window,
+		"Most of a Rocket: 5/6.",
+		"Almost all of a Rocket!",
+		spr_rocket_body_window_wing_engine_wing,
 		false,
 		function () {}
 		),	
@@ -134,7 +161,16 @@ rocket_cone: new create_item(
 		"The Rocket Body and Window.",
 		spr_rocket_body_window,
 		false,
-		function () {}
+		function () 
+		{
+			if array_contains(inv, global.item_list.rocket_body_window_wing_engine_wing)
+			
+			{
+			array_delete(inv, selected_item, 1);
+			array_insert(inv, selected_item, global.item_list.rocket_complete);
+			array_delete(inv, array_get_index(inv, global.item_list.rocket_body_window_wing_engine_wing), 1);
+			}
+		}
 		),	
 		
 rocket_complete: new create_item(
@@ -164,6 +200,7 @@ ladder: new create_item(
 					{
 						instance_destroy();
 						_used = true;
+						score +=10;
 					}
 				}
 			}
@@ -171,9 +208,32 @@ ladder: new create_item(
 			if _used ==true
 			{array_delete(inv, selected_item, 1);}
 	}
-				
+			
 	
 ),
+
+
+axe: new create_item(
+
+		"Axe",
+		"Used to cut trees.",
+		spr_axe,
+		false,
+		function ()
+		{
+			if instance_exists(obj_tree_break) //check to see if there are any of these in the room
+				{
+					with(obj_tree_break) //okay if there are, if the player is within 10 px, then the object destroys itself
+					{
+						if distance_to_object(obj_player_ram) < 10 
+						{
+						instance_destroy();
+						}
+					}
+				}
+		}
+),
+
 pi_paper: new create_item(
 		
 		"PI Paper",
@@ -209,7 +269,7 @@ info_pickup: new create_item(
 //create the inventory
 
 inv = array_create(0);
-inv_max = 6;
+inv_max = 10;
 selected_item = -1; //default value is nothing is selectd
 //for drawing and mouse positions
 sep = 16;

@@ -33,7 +33,9 @@ switch(_text_id) {
 			scr_option("not sure", "mechanic - not sure");
 		break;
 		case"mechanic - moon data":
+			lives -=1;
 			scr_text("Are you sure about that?"); //I'd like to make this loop back around, not sure how yet
+		
 		break;
 		case"mechanic - not sure":
 			scr_text("Didn't your PI leave instructions?");
@@ -46,6 +48,7 @@ switch(_text_id) {
 				scr_option("6 TB", "mechanic - tb");
 		break;
 		case"mechanic - butt-ton":
+			lives -=1;
 			scr_text("Wow! Good luck with that! But I think that's too much for your rocket.");
 		break;
 		case"mechanic - kb":
