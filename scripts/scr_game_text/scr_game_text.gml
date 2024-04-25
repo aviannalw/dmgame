@@ -22,6 +22,14 @@ switch(_text_id) {
 			scr_text("aw, you picked no :(");
 			break;
 	
+	
+//--------------welcome message!!!-----------------//
+	case"welcome message":
+		scr_text("Hello, Player! Your PI has left their data management plan to you.");
+		scr_text("Your mission, should you choose to accept it: build a rocket with all six parts.");
+		scr_text("Collect the rocket blueprints to begin.");
+		break;
+	
 //--------------LEVEL 1-----------------//	
 	
 	case"mechanic":

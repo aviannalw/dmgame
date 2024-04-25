@@ -126,6 +126,7 @@
     {"id":{"name":"obj_title_menu","path":"objects/obj_title_menu/obj_title_menu.yy",},},
     {"id":{"name":"spr_rocket_launchpad","path":"sprites/spr_rocket_launchpad/spr_rocket_launchpad.yy",},},
     {"id":{"name":"spr_blueprint_pickup","path":"sprites/spr_blueprint_pickup/spr_blueprint_pickup.yy",},},
+    {"id":{"name":"obj_welcome_block","path":"objects/obj_welcome_block/obj_welcome_block.yy",},},
     {"id":{"name":"pause_room","path":"rooms/pause_room/pause_room.yy",},},
     {"id":{"name":"spr_lab_stuff","path":"sprites/spr_lab_stuff/spr_lab_stuff.yy",},},
     {"id":{"name":"spr_ladder","path":"sprites/spr_ladder/spr_ladder.yy",},},

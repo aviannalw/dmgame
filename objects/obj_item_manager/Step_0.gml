@@ -10,6 +10,7 @@ for ( var i = 0; i < array_length(inv); i++)
 if mouse_x > _xx && mouse_x < _xx+8 && mouse_y > _yy && mouse_y < _yy+8 //8 has to do with the width of the sprite, basically this makes a hitbox for the sprite so we can click on it
 	{
 		selected_item = i;
+		
 	}
 }
 

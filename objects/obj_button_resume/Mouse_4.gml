@@ -8,4 +8,4 @@
 // Inherit the parent event
 event_inherited();
 
-room_goto(room_last);
+room_goto(menu_screen_room);

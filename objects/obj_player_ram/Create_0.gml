@@ -16,3 +16,7 @@ ladders = 0; // don't think i need this
 
 
 has_piece_1 = false;
+
+
+alert = true;
+alert_text = string;
