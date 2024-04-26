@@ -82,6 +82,7 @@
     {"id":{"name":"spr_blueprint","path":"sprites/spr_blueprint/spr_blueprint.yy",},},
     {"id":{"name":"spr_ram_right","path":"sprites/spr_ram_right/spr_ram_right.yy",},},
     {"id":{"name":"spr_rocket_body_window","path":"sprites/spr_rocket_body_window/spr_rocket_body_window.yy",},},
+    {"id":{"name":"runner_path","path":"paths/runner_path/runner_path.yy",},},
     {"id":{"name":"spr_volume_up","path":"sprites/spr_volume_up/spr_volume_up.yy",},},
     {"id":{"name":"spr_telescope","path":"sprites/spr_telescope/spr_telescope.yy",},},
     {"id":{"name":"obj_button_quit","path":"objects/obj_button_quit/obj_button_quit.yy",},},

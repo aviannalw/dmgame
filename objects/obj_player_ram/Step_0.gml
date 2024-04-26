@@ -52,8 +52,3 @@ if xspeed == 0 && yspeed == 0
 	
 
 
-if place_meeting(x, y,inst_170D29E9)  && alert == true && room = lab_room
-{
-
-alert = false;
-}

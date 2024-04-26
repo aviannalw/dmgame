@@ -1,10 +1,13 @@
 
 function scr_game_text(_text_id){ //how to get different characters to say different things, could also be used for items?
 
-//hide the rocket body
-instance_deactivate_object(inst_6D7DD6CC);
+
 talked_to_mechanic = false;
 mechanic_count = 0;
+
+
+talked_to_runner = false;
+runner_count = 0;
 
 
 switch(_text_id) {
@@ -93,10 +96,37 @@ switch(_text_id) {
 		break;
 		
 //--------------LEVEL 2-----------------//
-		case"researcher":
-		scr_text("hey, can I look at your blueprints?");
+		case"runner":
+		scr_text("*pant* *pant* Oh, don't worry. I'm just resting.");
+		scr_text("...");
+		scr_text("......");
+		scr_text("Say — aren't you working for that PI? I heard your project is really cool.");
+		scr_option("It is.", "agree");
 		break;
 		
+		case"agree":
+		scr_text("Do you think you'll make your data public after you finish?");
+		scr_option("That's the plan!", "plan agree");
+		break;
+		
+		case"plan agree":
+		scr_text("Hey, that's awesome.");
+		scr_text("While you're here, can I look at your blueprints so I can get to your data?");
+		scr_text("I think you might need this rocket piece...");
+		scr_option("Take a Look.", "look");
+		scr_option("No way!", "no way");
+		break;
+		
+		case"look":
+		scr_text("...");
+		scr_text("...... :)");
+		scr_text("I think I get it. Thanks for letting me catch my breath.");
+		scr_text("You should grab that window.");
+		if talked_to_runner = false && runner_count = 0 {
+				instance_activate_object(inst_100EB070);
+				talked_to_runner = true;
+				runner_count ++;}
+		break;
 		
 		
 //--------------LEVEL 3-----------------//
