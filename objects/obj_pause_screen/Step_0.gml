@@ -1,5 +1,8 @@
+if object_exists(obj_speak_block)
+{move = false;}
 if room == lab_room || open_world_room || planet_room || gov_room
 {
+
 if 
 keyboard_check_direct(ord("P")) || keyboard_check_pressed(vk_escape) //if this is pressed, pause the game
     {

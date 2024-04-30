@@ -112,6 +112,7 @@
     {"id":{"name":"obj_pause_object","path":"objects/obj_pause_object/obj_pause_object.yy",},},
     {"id":{"name":"spr_tree_break","path":"sprites/spr_tree_break/spr_tree_break.yy",},},
     {"id":{"name":"obj_character","path":"objects/obj_character/obj_character.yy",},},
+    {"id":{"name":"spr_exit","path":"sprites/spr_exit/spr_exit.yy",},},
     {"id":{"name":"spr_ram_khaki","path":"sprites/spr_ram_khaki/spr_ram_khaki.yy",},},
     {"id":{"name":"spr_text_box","path":"sprites/spr_text_box/spr_text_box.yy",},},
     {"id":{"name":"script_macros","path":"scripts/script_macros/script_macros.yy",},},

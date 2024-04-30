@@ -4,6 +4,8 @@ movespeed = 1;
 lives = 3;
 score = 0;
 
+
+
 sprite[RIGHT] = spr_ram_right; //an array has brackets, starts at 0 because RIGHT does and arrays start at 0
 sprite[UP] = spr_ram_up;
 sprite[LEFT] = spr_ram_left;
@@ -17,3 +19,14 @@ ladders = 0; // don't think i need this
 
 has_piece_1 = false;
 
+
+
+
+
+enum move_state
+{	
+	MOVE,
+	FREEZE
+}
+
+current_state = move_state.MOVE;

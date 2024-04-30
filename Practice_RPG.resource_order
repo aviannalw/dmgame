@@ -92,6 +92,7 @@
     {"name":"obj_pause_object","order":6,"path":"objects/obj_pause_object/obj_pause_object.yy",},
     {"name":"spr_tree_break","order":49,"path":"sprites/spr_tree_break/spr_tree_break.yy",},
     {"name":"obj_character","order":21,"path":"objects/obj_character/obj_character.yy",},
+    {"name":"spr_exit","order":56,"path":"sprites/spr_exit/spr_exit.yy",},
     {"name":"spr_ram_khaki","order":21,"path":"sprites/spr_ram_khaki/spr_ram_khaki.yy",},
     {"name":"spr_text_box","order":16,"path":"sprites/spr_text_box/spr_text_box.yy",},
     {"name":"snd_game_music","order":4,"path":"sounds/snd_game_music/snd_game_music.yy",},

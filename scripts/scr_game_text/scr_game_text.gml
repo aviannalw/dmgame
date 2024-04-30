@@ -8,7 +8,8 @@ mechanic_count = 0;
 
 talked_to_runner = false;
 runner_count = 0;
-
+//obj_player_ram.current_state = move_state.MOVE
+if obj_text_box.exists = false {
 
 switch(_text_id) {
 	case"NPC 1"://to make a new thing that talks, add a new case and put the id in the instance creation code in the room
@@ -28,11 +29,13 @@ switch(_text_id) {
 	
 //--------------welcome message!!!-----------------//
 	case"welcome message":
+//obj_player_ram.current_state = move_state.FREEZE
 		scr_text("Hello, Player! Your PI has left their data management plan to you.");
 		scr_text("Your mission, should you choose to accept it: build a rocket with all six parts.");
 		scr_text("Collect the rocket blueprints to begin.");
+//obj_player_ram.current_state = move_state.MOVE
 		break;
-	
+		
 //--------------LEVEL 1-----------------//	
 	
 	case"mechanic":
@@ -89,6 +92,7 @@ switch(_text_id) {
 				mechanic_count ++;
 				//get mechanic to move out of the way???
 			}
+		obj_speak_block.is_typing = false;//make mouse input work again
 		break;
 		
 		case"mechanic thanks":
@@ -221,5 +225,5 @@ switch(_text_id) {
 		scr_text("*sigh* It's more rocket stuff, isn't it?");
 		break;
 }
-
+}
 }
