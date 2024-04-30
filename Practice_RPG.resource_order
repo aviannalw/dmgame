@@ -106,7 +106,7 @@
     {"name":"obj_title_menu","order":7,"path":"objects/obj_title_menu/obj_title_menu.yy",},
     {"name":"spr_rocket_launchpad","order":51,"path":"sprites/spr_rocket_launchpad/spr_rocket_launchpad.yy",},
     {"name":"spr_blueprint_pickup","order":32,"path":"sprites/spr_blueprint_pickup/spr_blueprint_pickup.yy",},
-    {"name":"obj_welcome_block","order":38,"path":"objects/obj_welcome_block/obj_welcome_block.yy",},
+    {"name":"obj_auto_block","order":38,"path":"objects/obj_auto_block/obj_auto_block.yy",},
     {"name":"pause_room","order":6,"path":"rooms/pause_room/pause_room.yy",},
     {"name":"spr_lab_stuff","order":39,"path":"sprites/spr_lab_stuff/spr_lab_stuff.yy",},
     {"name":"spr_ladder","order":27,"path":"sprites/spr_ladder/spr_ladder.yy",},

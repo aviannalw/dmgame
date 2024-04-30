@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_welcome_block",
+  "name": "obj_auto_block",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
@@ -30,9 +30,9 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "spr_mechanic",
-    "path": "sprites/spr_mechanic/spr_mechanic.yy",
+    "name": "spr_info",
+    "path": "sprites/spr_info/spr_info.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

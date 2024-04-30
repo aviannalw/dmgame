@@ -8,7 +8,8 @@ mechanic_count = 0;
 
 talked_to_runner = false;
 runner_count = 0;
-//obj_player_ram.current_state = move_state.MOVE
+inv = obj_item_manager.inv;
+
 if obj_text_box.exists = false {
 
 switch(_text_id) {
@@ -29,11 +30,9 @@ switch(_text_id) {
 	
 //--------------welcome message!!!-----------------//
 	case"welcome message":
-//obj_player_ram.current_state = move_state.FREEZE
 		scr_text("Hello, Player! Your PI has left their data management plan to you.");
 		scr_text("Your mission, should you choose to accept it: build a rocket with all six parts.");
 		scr_text("Collect the rocket blueprints to begin.");
-//obj_player_ram.current_state = move_state.MOVE
 		break;
 		
 //--------------LEVEL 1-----------------//	
@@ -100,11 +99,12 @@ switch(_text_id) {
 		break;
 		
 //--------------LEVEL 2-----------------//
+		
 		case"runner":
 		scr_text("*pant* *pant* Oh, don't worry. I'm just resting.");
 		scr_text("...");
 		scr_text("......");
-		scr_text("Say — aren't you working for that PI? I heard your project is really cool.");
+		scr_text("Say, aren't you working for that PI? I heard your project is really cool.");
 		scr_option("It is.", "agree");
 		break;
 		
@@ -115,7 +115,12 @@ switch(_text_id) {
 		
 		case"plan agree":
 		scr_text("Hey, that's awesome.");
-		scr_text("While you're here, can I look at your blueprints so I can get to your data?");
+		scr_text("While you're here, can I look at your blueprints so I can also get to your data?");
+		if !array_contains(inv, global.item_list.blueprint)
+		{ scr_text("Hey wait a second...you don't have any blueprints.");
+			scr_text("How are you supposed to build a rocket ship without them?");
+			break;
+		}
 		scr_text("I think you might need this rocket piece...");
 		scr_option("Take a Look.", "look");
 		scr_option("No way!", "no way");
@@ -134,37 +139,42 @@ switch(_text_id) {
 		
 		
 //--------------LEVEL 3-----------------//
-		case"rp1":
-		scr_text("1/6: important information.");
-		scr_text("find the next piece in the northern flower field");
+		case"clue 1":
+		scr_text("Clue 1: Data standards ensure the pieces of the plan work together, like bolts on a rocket ship.");
+		scr_text("Find the next clue in the northern flower field");
 		break;
 		
-		case"rp2":
-		scr_text("2/6: more info girlipop.");
-		scr_text("are you writing this down?");
-		scr_text("find the next piece behind the lab");
+		case"clue 2":
+		scr_text("Which is not an example of data standards?");
+		scr_option("How data are generated, processed, and documented.", "generated");
+		scr_option("Common guidelines for data type(s).", "guidelines");
+		scr_option("Limits on data storage.", "limits");
 		break;
 		
-		case"rp3":
-		scr_text("3/6: aw, you found me. anyway you need to know that...");
-		scr_text("and this too...");
-		scr_text("find the next piece on the southwest beach");
+			case"generated":
+			lives -=1;
+			scr_text("Think again!");
+			break;
+			
+			case"guidelines":
+			lives -=1;
+			scr_text("Nope!");
+			break;
+			
+			case"limits":
+			scr_text("That's correct!");
+			scr_text("Find the next clue behind the lab");
+			break;
+		
+		case"clue 3":
+		scr_text("Sometimes there are no common standards for the type of data.");
+		scr_text("In that case, document your work!");
+		scr_text("now get cutting.");
+		scr_text("I think I saw a rocket wing in the trees...");
 		break;
 		
-		case"rp4":
-		scr_text("4/6: a really good fact.");
-		scr_text("find the next piece in the trees, maybe add an axe to the inventory to cut down a specific tree");
-		break;
-		
-		case"rp5":
-		scr_text("5/6: more info, hooray");
-		scr_text("find the last piece between the cliffs/with the guy on the beach");
-		break;
-		
-		case"rp6":
-		scr_text("6/6: last piece of info...");
-		scr_text("you did it! let's add the wing to your inventory!");
-		scr_text("go up the cliffs to the telescope");
+		case"clue 4":
+		scr_text("a ladder!");
 		break;
 		
 //--------------LEVEL 4-----------------//	
