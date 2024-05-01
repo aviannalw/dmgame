@@ -18,15 +18,3 @@ ladders = 0; // don't think i need this
 
 
 has_piece_1 = false;
-
-
-
-
-
-enum move_state
-{	
-	MOVE,
-	FREEZE
-}
-
-current_state = move_state.MOVE;

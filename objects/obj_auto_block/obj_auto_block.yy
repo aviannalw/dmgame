@@ -28,7 +28,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
+  "solid": false,
   "spriteId": {
     "name": "spr_info",
     "path": "sprites/spr_info/spr_info.yy",

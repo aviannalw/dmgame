@@ -1,4 +1,4 @@
-///if the player runs into this, it gets added to the inventory
+ ///if the player runs into this, it gets added to the inventory
 
 sprite_index = item.sprite; //means the sprite will match the one specified in the create event, can change per instance
 

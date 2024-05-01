@@ -9,6 +9,9 @@ mechanic_count = 0;
 talked_to_runner = false;
 runner_count = 0;
 inv = obj_item_manager.inv;
+clue_1_appeared = false;
+clue_2_appeared = false;
+clue_3_appeared = false;
 
 if obj_text_box.exists = false {
 
@@ -89,7 +92,6 @@ switch(_text_id) {
 				instance_activate_object(inst_6D7DD6CC);
 				talked_to_mechanic = true;
 				mechanic_count ++;
-				//get mechanic to move out of the way???
 			}
 		obj_speak_block.is_typing = false;//make mouse input work again
 		break;
@@ -142,39 +144,60 @@ switch(_text_id) {
 		case"clue 1":
 		scr_text("Clue 1: Data standards ensure the pieces of the plan work together, like bolts on a rocket ship.");
 		scr_text("Find the next clue in the northern flower field");
+		clue_1_appeared = true;
+		if clue_1_appeared == true {instance_activate_object(inst_127BC255);}
 		break;
 		
 		case"clue 2":
-		scr_text("Which is not an example of data standards?");
-		scr_option("How data are generated, processed, and documented.", "generated");
-		scr_option("Common guidelines for data type(s).", "guidelines");
-		scr_option("Limits on data storage.", "limits");
+		scr_text("Which is not an example of a data standard?");
+		scr_option("How data are generated", "generated");
+		scr_option("Common guidelines for data", "guidelines");
+		scr_option("Limits on data storage", "limits");
 		break;
 		
 			case"generated":
 			lives -=1;
 			scr_text("Think again!");
+					scr_text("Which is not an example of a data standard?");
+					scr_option("How data are generated", "generated");
+					scr_option("Common guidelines for data", "guidelines");
+					scr_option("Limits on data storage", "limits");
 			break;
+			
 			
 			case"guidelines":
 			lives -=1;
 			scr_text("Nope!");
+					scr_text("Which is not an example of a data standard?");
+					scr_option("How data are generated", "generated");
+					scr_option("Common guidelines for data", "guidelines");
+					scr_option("Limits on data storage", "limits");
 			break;
-			
-			case"limits":
+		
+		
+		case"limits":
+		correct = true;
+		if correct = true {
 			scr_text("That's correct!");
 			scr_text("Find the next clue behind the lab");
+			instance_deactivate_object(inst_127BC255);
+			clue_2_appeared = true;
+			if clue_2_appeared == true {instance_activate_object(inst_5EE4A6E0);}
 			break;
+		}
+		
 		
 		case"clue 3":
 		scr_text("Sometimes there are no common standards for the type of data.");
 		scr_text("In that case, document your work!");
 		scr_text("now get cutting.");
 		scr_text("I think I saw a rocket wing in the trees...");
+		clue_3_appeared = true;
+		if clue_3_appeared == true {instance_activate_object(inst_5EE4A6E0); instance_activate_object(inst_AB7EA7D); /*the ladder too*/ }
 		break;
 		
 		case"clue 4":
-		scr_text("a ladder!");
+		scr_text("does that tree look funny to you?");
 		break;
 		
 //--------------LEVEL 4-----------------//	
@@ -220,6 +243,7 @@ switch(_text_id) {
 		
 		case"planet_3 selected":
 		scr_text("Great choice!");
+		instance_activate_object(inst_52F03E44);
 		break;
 		
 		case"planet_3 unselected":

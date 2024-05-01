@@ -1,0 +1,1 @@
+instance_deactivate_object(inst_52F03E44)

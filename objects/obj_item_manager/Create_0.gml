@@ -30,7 +30,6 @@ rocket_body: new create_item(
 	
 	//this function is specific to this item, it's the effect the item has
 	
-				//coud be also used with the ladder item
 	function ()
 		{
 			if array_contains(inv, global.item_list.rocket_window)
@@ -191,6 +190,8 @@ ladder: new create_item(
 	false, //cannot drop this item
 	function ()
 	{
+
+		
 		var _used = false; //makes it a single-use item
 		if instance_exists(obj_ivy_wall_block) //check to see if there are any of these in the room
 			{

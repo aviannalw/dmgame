@@ -56,17 +56,5 @@ y += yspeed;
 
 //animate
 if xspeed == 0 && yspeed == 0 
-	{ image_index = 0; };
-	
-
-
-/* break;
-
-case"move_state.FREEZE":
-	movespeed = 0;
-	image_index = 0;
-break;
-*/
+	{ image_index = 0; }
 }
-
-
