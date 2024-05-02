@@ -58,3 +58,7 @@ y += yspeed;
 if xspeed == 0 && yspeed == 0 
 	{ image_index = 0; }
 }
+
+/*if position_meeting(obj_player_ram.x, obj_player_ram.y, inst_6BFAE97B)
+{instance_destroy(inst_6BFAE97B);
+	instance_activate_object(inst_1436FD79);}

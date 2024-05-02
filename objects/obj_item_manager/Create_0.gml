@@ -32,6 +32,18 @@ rocket_body: new create_item(
 	
 	function ()
 		{
+				//i give up on cutscenes 
+				/* if obj_player_ram.has_clicked_rb = false
+				{var _layer = "sequences";
+				var _seq = layer_sequence_create(_layer, obj_player_ram.x, obj_player_ram.y, seq_progress_1);
+		
+					layer_sequence_play(_seq);
+					layer_sequence_destroy(_seq);
+					obj_player_ram.has_clicked_rb = true;
+				}
+				*/
+	
+	
 			if array_contains(inv, global.item_list.rocket_window)
 			//inv selected item equals rocket body and rocket window exists in inventory, then "combine" the objects into the new sprite
 			{

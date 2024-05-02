@@ -18,3 +18,15 @@ ladders = 0; // don't think i need this
 
 
 has_piece_1 = false;
+
+//hide the rocket body
+instance_deactivate_object(inst_6D7DD6CC);
+// has_clicked_rb = false;
+
+//hide the window
+instance_deactivate_object(inst_100EB070);
+
+//hide the engine
+instance_deactivate_object(inst_7EC8DACA);
+
+inv = obj_item_manager.inv;

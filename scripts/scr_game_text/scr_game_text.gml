@@ -90,6 +90,7 @@ switch(_text_id) {
 			scr_text("Here you go!");
 			if talked_to_mechanic = false && mechanic_count = 0 {
 				instance_activate_object(inst_6D7DD6CC);
+				
 				talked_to_mechanic = true;
 				mechanic_count ++;
 			}
@@ -201,6 +202,16 @@ switch(_text_id) {
 		break;
 		
 //--------------LEVEL 4-----------------//	
+		
+		case"welcome telescope":
+		scr_text("Welcome to the telescope!");
+		scr_text("Choose the repository planet that best fits with your data.");
+		scr_text("Check your PI paper for guidelines.");
+		scr_text("Click on a repository planet to view characteristics...");
+		break;
+		
+		
+		
 		case"planet_1":
 		scr_text("Name: Planet One         Storage: Up to 2 TB.");
 		scr_text("Sensitivity: Accepts De-Identified Human Subject Data.         Cost: Free up to 2TB.");
@@ -243,7 +254,8 @@ switch(_text_id) {
 		
 		case"planet_3 selected":
 		scr_text("Great choice!");
-		instance_activate_object(inst_52F03E44);
+		scr_text("Exit the telescope and collect the rocket thruster.");
+		instance_activate_object(inst_7EC8DACA);
 		break;
 		
 		case"planet_3 unselected":
@@ -257,6 +269,11 @@ switch(_text_id) {
 		scr_text("What?");
 		scr_text("What do you want? Is it rocket stuff?");
 		scr_text("*sigh* It's more rocket stuff, isn't it?");
+		if !array_contains(inv, global.item_list.rocket_engine) || !array_contains(inv, global.item_list.rocket_body_window_wing_engine)
+		{	scr_text("Hey, it doesn't look like you have enough of a plan to come talk to me yet.");
+			scr_text("Come back when you have five rocket pieces.");
+			break;
+			}
 		break;
 }
 }
