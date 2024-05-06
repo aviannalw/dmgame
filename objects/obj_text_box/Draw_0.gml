@@ -1,5 +1,5 @@
 
-accept_key = keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_left); //could also set to a specific key ( ord("E") )
+accept_key = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left);//could also set to a specific key ( ord("E") )
 is_typing = false;
 text_box_x = camera_get_view_x(view_camera[0]);//we're placing the text box
 text_box_y = camera_get_view_y(view_camera[0]) + 144; //dialogue box will be 12 px from the top
@@ -158,8 +158,8 @@ if (draw_char == text_length[page]) && (page == page_number -1) //if we're on th
 {
 	
 		//option selection
-		option_pos += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
-		option_pos = clamp(option_pos, 0, option_number -1); //possible to loop through options as well, not coded here
+		option_pos += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up); //coulnd't figure out wasd controls on top of this oh well
+		option_pos = clamp(option_pos, 0, option_number -1);
 		
 	
 		//draw the options

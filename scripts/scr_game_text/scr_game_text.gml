@@ -34,8 +34,25 @@ switch(_text_id) {
 //--------------welcome message!!!-----------------//
 	case"welcome message":
 		scr_text("Hello, Player! Your PI has left their data management plan to you.");
-		scr_text("Your mission, should you choose to accept it: build a rocket with all six parts.");
+		scr_text("Your mission, should you choose to accept it: build a rocket with all six parts of the plan.");
+		scr_text("Would you like a tutorial for the game controls?");
+		scr_option("No, thanks", "no tutorial");
+		scr_option("Yes, please", "yes tutorial");
+		break;
+		
+		case"no tutorial":
 		scr_text("Collect the rocket blueprints to begin.");
+		break;
+		
+		case"yes tutorial":
+		scr_text("Use the arrow keys or 'W', 'A', 'S', 'D' to move.");
+		scr_text("Walk over items to pick them up.");
+		scr_text("Click on items or characters to interact with them.");
+		scr_text("Use the mouse, spacebar, or enter key to select text options.");
+		scr_text("Press 'P' to pause the game.");
+		scr_text("Would you like to hear it again?");
+		scr_option("I'm good", "no tutorial");
+		scr_option("One more time?", "yes tutorial");
 		break;
 		
 	case"blueprint pickup":

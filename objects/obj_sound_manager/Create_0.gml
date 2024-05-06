@@ -1,6 +1,13 @@
+audio_group_load(audio_music);
+audio_group_load(audio_sfx);
+audio_group_set_gain(audio_music, 1, 0);
+audio_group_set_gain(audio_sfx, 1, 0);
+
+
+
 global.master_volume = 1;
-global.music_volume = 1;
-global.sfx_volume = 1;
+global.music_volume = audio_group_get_gain(audio_music);
+global.sfx_volume = audio_group_get_gain(audio_sfx);
 
 
 

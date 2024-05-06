@@ -16,3 +16,7 @@ else
 }
 percentage = round(((x - left_limit)/(right_limit - left_limit)) * 100);
 global.music_volume = percentage/100;
+
+
+audio_group_load(audio_music);
+audio_group_set_gain(audio_music, global.music_volume, 0);

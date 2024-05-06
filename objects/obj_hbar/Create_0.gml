@@ -1,6 +1,6 @@
 //randomize();
 
-image_xscale = random_range(.5, 1);
+image_xscale = 1;
 image_yscale = image_xscale;
 
 right_limit = obj_hbar.x + (sprite_width) - (image_xscale*10);

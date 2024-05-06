@@ -19,6 +19,8 @@ text_box_y = 0;
 
 
 
+
+
 //text
 page = 0;
 page_number = 0; //variables have to be initalized in the create event

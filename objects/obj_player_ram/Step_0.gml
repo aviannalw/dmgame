@@ -1,3 +1,5 @@
+//for testing purposes
+if keyboard_check_pressed(ord("L")) {lives --;}
 if lives <= 0 && !audio_is_playing(snd_game_over)	{audio_play_sound(snd_game_over, 10, false); room_goto(end_screen_room);}
 if instance_exists(obj_text_box)
 {exit;}
@@ -7,11 +9,11 @@ else {
 case"move_state.MOVE":
 */
 movespeed = 1;
-rightkey = keyboard_check(vk_right); //check the keyboard for a specific button being pressed, vk_right is a variable already set up by gamemaker, means right arrow key
+rightkey = keyboard_check(vk_right) || keyboard_check(ord("D"));//check the keyboard for a specific button being pressed, vk_right is a variable already set up by gamemaker, means right arrow key
 //function checks if right arrow key is being pressed, 1 is yes, 0 if no
-leftkey = keyboard_check(vk_left);
-upkey = keyboard_check(vk_up);
-downkey = keyboard_check(vk_down);
+leftkey = keyboard_check(vk_left)|| keyboard_check(ord("A"));
+upkey = keyboard_check(vk_up)|| keyboard_check(ord("W"));
+downkey = keyboard_check(vk_down)|| keyboard_check(ord("S"));
 
 xspeed = (rightkey - leftkey) * movespeed; //value of right and left keys calculate the direction we're going
 yspeed = (downkey - upkey) * movespeed;
