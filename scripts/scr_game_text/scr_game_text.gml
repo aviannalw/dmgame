@@ -38,7 +38,21 @@ switch(_text_id) {
 		scr_text("Collect the rocket blueprints to begin.");
 		break;
 		
+	case"blueprint pickup":
+	scr_text("You picked up the rocket blueprints!");
+	scr_text("Click and hold to view them.");
+	break;
+		
 //--------------LEVEL 1-----------------//	
+	
+	case"pi paper pickup":
+	scr_text("You picked up a message from your PI!");
+	scr_text("Click and hold to read it.");
+	break;
+	
+	case"see mechanic":
+	scr_text("You see a rocket mechanic.")
+	break;
 	
 	case"mechanic":
 		scr_text("Hi! Your PI told me you might need some help with a rocket ship.");
@@ -50,12 +64,17 @@ switch(_text_id) {
 		break;
 		case"mechanic - moon data":
 			lives -=1;
-			scr_text("Are you sure about that?"); //I'd like to make this loop back around, not sure how yet
-		
+			scr_text("Are you sure about that?");
+			scr_text("What kind of data do you have?");
+			scr_option("moon data", "mechanic - moon data")
+			scr_option("space data", "mechanic - space data");
+			scr_option("not sure", "mechanic - not sure");
 		break;
 		case"mechanic - not sure":
 			scr_text("Didn't your PI leave instructions?");
+			obj_speak_block.is_typing = false; //let's the dialogue loop again on click
 		break;
+		
 		case"mechanic - space data":
 			scr_text("My favorite kind!");
 			scr_text("How much space data do you have?");
@@ -66,9 +85,14 @@ switch(_text_id) {
 		case"mechanic - butt-ton":
 			lives -=1;
 			scr_text("Wow! Good luck with that! But I think that's too much for your rocket.");
+			obj_speak_block.is_typing = false;
 		break;
 		case"mechanic - kb":
 			scr_text("Are you sure about that?");
+			scr_text("How much space data do you have?");
+				scr_option("A butt-ton!", "mechanic - butt-ton");
+				scr_option("1 KB", "mechanic - kb");
+				scr_option("6 TB", "mechanic - tb");
 		break;
 		case"mechanic - tb":
 			scr_text("That sounds about right.");
@@ -83,14 +107,16 @@ switch(_text_id) {
 		break;
 		case"mechanic - weird":
 			scr_text("Huh...weird.");
+			obj_speak_block.is_typing = false;
 		break;
 		case"mechanic - telescope":
 			scr_text("Thanks. That's really helpful.");
 			scr_text("Well, let me get you settled. One second and I'll engrave this rocket body for you.");
 			scr_text("Here you go!");
 			if talked_to_mechanic = false && mechanic_count = 0 {
-				instance_activate_object(inst_6D7DD6CC);
-				
+				instance_activate_object(inst_6D7DD6CC); //the rocket body
+				instance_activate_object(inst_232FC494); //the second mechanic case, thank you umessage
+				instance_deactivate_object(inst_614EC763);//delete this mechanic
 				talked_to_mechanic = true;
 				mechanic_count ++;
 			}
@@ -98,16 +124,21 @@ switch(_text_id) {
 		break;
 		
 		case"mechanic thanks":
-			scr_text("Thanks for coming! I'm sure you have more pieces to find...");
+			scr_text("Thanks for coming and telling me about your data! I'm sure you have more pieces to find...");
+			obj_speak_block.is_typing = false;
 		break;
 		
 //--------------LEVEL 2-----------------//
+		
+		case"see runner":
+		scr_text("You see someone on a run in the woods. He looks tired.");
+		break;
 		
 		case"runner":
 		scr_text("*pant* *pant* Oh, don't worry. I'm just resting.");
 		scr_text("...");
 		scr_text("......");
-		scr_text("Say, aren't you working for that PI? I heard your project is really cool.");
+		scr_text("Say, aren't you working for that PI? He was in a hurry, but I heard your project is really cool.");
 		scr_option("It is.", "agree");
 		break;
 		
@@ -122,9 +153,10 @@ switch(_text_id) {
 		if !array_contains(inv, global.item_list.blueprint)
 		{ scr_text("Hey wait a second...you don't have any blueprints.");
 			scr_text("How are you supposed to build a rocket ship without them?");
+			obj_speak_block.is_typing = false;
 			break;
 		}
-		scr_text("I think you might need this rocket piece...");
+		scr_text("I'll trade you this thing I found...");
 		scr_option("Take a Look.", "look");
 		scr_option("No way!", "no way");
 		break;
@@ -132,12 +164,18 @@ switch(_text_id) {
 		case"look":
 		scr_text("...");
 		scr_text("...... :)");
-		scr_text("I think I get it. Thanks for letting me catch my breath.");
-		scr_text("You should grab that window.");
+		scr_text("Oh, I get it! You're building a rocket ship. You'll need this thing then.");
+		scr_text("Thanks for letting me catch my breath.");
 		if talked_to_runner = false && runner_count = 0 {
 				instance_activate_object(inst_100EB070);
 				talked_to_runner = true;
-				runner_count ++;}
+				runner_count ++;
+				obj_speak_block.is_typing = false;}
+		break;
+		
+		case"no way":
+		scr_text("*shrugs* okay.");
+		obj_speak_block.is_typing = false;
 		break;
 		
 		
@@ -152,8 +190,8 @@ switch(_text_id) {
 		case"clue 2":
 		scr_text("Which is not an example of a data standard?");
 		scr_option("How data are generated", "generated");
-		scr_option("Common guidelines for data", "guidelines");
-		scr_option("Limits on data storage", "limits");
+		scr_option("Common guidelines", "guidelines");
+		scr_option("Storage limits", "limits");
 		break;
 		
 			case"generated":
@@ -161,8 +199,8 @@ switch(_text_id) {
 			scr_text("Think again!");
 					scr_text("Which is not an example of a data standard?");
 					scr_option("How data are generated", "generated");
-					scr_option("Common guidelines for data", "guidelines");
-					scr_option("Limits on data storage", "limits");
+					scr_option("Common guidelines", "guidelines");
+					scr_option("Storage limits", "limits");
 			break;
 			
 			
@@ -171,8 +209,8 @@ switch(_text_id) {
 			scr_text("Nope!");
 					scr_text("Which is not an example of a data standard?");
 					scr_option("How data are generated", "generated");
-					scr_option("Common guidelines for data", "guidelines");
-					scr_option("Limits on data storage", "limits");
+					scr_option("Common guidelines", "guidelines");
+					scr_option("Storage limits", "limits");
 			break;
 		
 		
@@ -182,6 +220,7 @@ switch(_text_id) {
 			scr_text("That's correct!");
 			scr_text("Find the next clue behind the lab");
 			instance_deactivate_object(inst_127BC255);
+			instance_activate_object(inst_1A4EB7F9); //show the axe
 			clue_2_appeared = true;
 			if clue_2_appeared == true {instance_activate_object(inst_5EE4A6E0);}
 			break;
@@ -222,10 +261,12 @@ switch(_text_id) {
 		
 		case"planet_1 selected":
 		scr_text("Your space data won't fit here! Try again.");
+		obj_speak_block.is_typing = false;
 		break;
 		
 		case"planet_1 unselected":
 		scr_text("You did not choose this planet.");
+		obj_speak_block.is_typing = false;
 		break;
 		
 		case"planet_2":
@@ -238,10 +279,12 @@ switch(_text_id) {
 		
 		case"planet_2 selected":
 		scr_text("You don't have the budget for that!");
+		obj_speak_block.is_typing = false;
 		break;
 		
 		case"planet_2 unselected":
 		scr_text("You did not choose this planet.");
+		obj_speak_block.is_typing = false;
 		break;
 		
 		case"planet_3":
@@ -255,26 +298,118 @@ switch(_text_id) {
 		case"planet_3 selected":
 		scr_text("Great choice!");
 		scr_text("Exit the telescope and collect the rocket thruster.");
+		obj_speak_block.is_typing = false;
 		instance_activate_object(inst_7EC8DACA);
+		instance_activate_object(inst_6D688131);
 		break;
 		
 		case"planet_3 unselected":
 		scr_text("You did not choose this planet.");
+		obj_speak_block.is_typing = false;
 		break;
 		
 		
 		
 //--------------LEVEL 5-----------------//	
+		
+		case"construction worker":
+		scr_text("Sorry, boss. This bridge isn't done yet.");
+		obj_speak_block.is_typing = false;
+		break;
+		
+		
+		
+		case"begin level 5":
+		scr_text("You thought about where to put your data and picked up the rocket thruster!");
+		instance_deactivate_object(inst_6202ED68); //get rid of the worker and fix the bridge!
+		instance_deactivate_object(inst_42635F0F);
+		scr_text("Continue to the government building across the bridge.");
+		break;
+		
 		case"govguy":
 		scr_text("What?");
 		scr_text("What do you want? Is it rocket stuff?");
 		scr_text("*sigh* It's more rocket stuff, isn't it?");
-		if !array_contains(inv, global.item_list.rocket_engine) || !array_contains(inv, global.item_list.rocket_body_window_wing_engine)
-		{	scr_text("Hey, it doesn't look like you have enough of a plan to come talk to me yet.");
-			scr_text("Come back when you have five rocket pieces.");
+		if !array_contains(inv, global.item_list.rocket_body_window_wing_engine) && ( !array_contains(inv, global.item_list.rocket_engine) && !array_contains(inv, global.item_list.rocket_left_wing) && !array_contains(inv, global.item_list.rocket_window) && !array_contains(inv, global.item_list.rocket_body) )
+		{ scr_text("Hey, it doesn't look like you have enough of a plan to come talk to me yet.");
+			scr_text("Come back when you have four rocket pieces.");
+			obj_speak_block.is_typing = false;
 			break;
-			}
+		}
+		
+		scr_text("Okay, here's the deal bud.");
+		scr_text("This data management stuff comes with a lot of reading, but the plan isn't so hard, right?");
+		scr_text("So you'll hear me out, and then I'll send you on your way.");
+		scr_text("I got a rocket wing with your name on it. ;)");
+		scr_option("No thanks", "no thanks gov guy");
+		scr_option("I'll listen","listen gov guy");
 		break;
+		
+		case"no thanks gov guy":
+		scr_text("Guess you won't finish the game, then...");
+		obj_speak_block.is_typing = false;
+		break;
+		
+		case"listen gov guy":
+		scr_text("here is what i have to say");
+		obj_speak_block.is_typing = false;
+		break;
+		//activate ladder
+		instance_activate_object(inst_6DE0E3D7);
+		
+//--------------LEVEL 6-----------------//
+
+
+		case"astronaut 1":
+		scr_text("Hi, I'm astronaut 1.");
+		scr_text("Pick me?");
+		scr_option("Yes", "astro 1 yes");
+		scr_option("No", "astro 1 no");
+		break;
+		
+		case"astro 1 yes":
+		scr_text("Awesome!");
+		break;
+		
+		case"astro 1 no":
+		scr_text("Alright.");
+		obj_speak_block.is_typing = false;
+		break;
+		
+		case"astronaut 2":
+		scr_text("Hi, I'm astronaut 2.");
+		scr_text("Pick me?");
+		scr_option("Yes", "astro 2 yes");
+		scr_option("No", "astro 2 no");
+		break;
+		
+		case"astro 2 yes":
+		scr_text("Great!");
+		break;
+		
+		case"astro 2 no":
+		scr_text("That's fair.");
+		obj_speak_block.is_typing = false;
+		break;
+		
+		case"astronaut 3":
+		scr_text("Hi, I'm astronaut 3.");
+		scr_text("Pick me?");
+		scr_option("Yes", "astro 3 yes");
+		scr_option("No", "astro 3 no");
+		break;
+		
+		case"astro 3 yes":
+		scr_text("It's an honor.");
+		break;
+		
+		case"astro 3 no":
+		scr_text("Some other time, then.");
+		obj_speak_block.is_typing = false; //this is here in case 3 isn't the right answer
+		break;
+		
+
+	
 }
 }
 }

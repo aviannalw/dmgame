@@ -29,8 +29,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "spr_mechanic",
-    "path": "sprites/spr_mechanic/spr_mechanic.yy",
+    "name": "spr_npcs",
+    "path": "sprites/spr_npcs/spr_npcs.yy",
   },
   "spriteMaskId": null,
   "visible": true,

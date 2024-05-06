@@ -185,7 +185,7 @@ if (draw_char == text_length[page]) && (page == page_number -1) //if we're on th
 	//draw the text
 for (var c = 0; c < draw_char; c++)
 {
-	// creates a square cursor target draw_text(mouse_x, mouse_y, char[c, page]);
+	/*creates a square cursor target*/ draw_text(mouse_x, mouse_y, char[c, page]);
 //	draw_text(char_x[c, page] + text_box_spr_w/2, char_y[c, page] + text_box_spr_h/2, char[c, page]);
 	draw_text_ext(text_box_x + text_x_offset[page] + border, text_box_y + border, string_copy(text[page], 1, draw_char), line_sep, line_width);
 //i think i need to do something with the viewport here

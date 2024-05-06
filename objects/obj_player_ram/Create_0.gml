@@ -2,6 +2,7 @@ xspeed = 0;
 yspeed = 0;
 movespeed = 1;
 lives = 3;
+
 score = 0;
 
 
@@ -21,12 +22,24 @@ has_piece_1 = false;
 
 //hide the rocket body
 instance_deactivate_object(inst_6D7DD6CC);
-// has_clicked_rb = false;
+//hide the mechanic thanks
+instance_deactivate_object(inst_232FC494);
+//hide the axe
+instance_deactivate_object(inst_1A4EB7F9);
 
 //hide the window
 instance_deactivate_object(inst_100EB070);
 
 //hide the engine
 instance_deactivate_object(inst_7EC8DACA);
+// hide the collect message
+instance_deactivate_object(inst_6D688131);
+
+//disable the bridge
+instance_activate_object(inst_6202ED68);
+instance_activate_object(inst_42635F0F);
+
+//hide the second ladder
+instance_deactivate_object(inst_6DE0E3D7);
 
 inv = obj_item_manager.inv;

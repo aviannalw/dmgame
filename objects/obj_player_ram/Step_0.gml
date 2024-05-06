@@ -1,4 +1,4 @@
-
+if lives <= 0 && !audio_is_playing(snd_game_over)	{audio_play_sound(snd_game_over, 10, false); room_goto(end_screen_room);}
 if instance_exists(obj_text_box)
 {exit;}
 else {
@@ -58,7 +58,3 @@ y += yspeed;
 if xspeed == 0 && yspeed == 0 
 	{ image_index = 0; }
 }
-
-/*if position_meeting(obj_player_ram.x, obj_player_ram.y, inst_6BFAE97B)
-{instance_destroy(inst_6BFAE97B);
-	instance_activate_object(inst_1436FD79);}
