@@ -30,13 +30,26 @@ rocket_body: new create_item(
 	
 	//this function is specific to this item, it's the effect the item has
 	
-				//coud be also used with the ladder item
 	function ()
 		{
+				//i give up on cutscenes 
+				/* if obj_player_ram.has_clicked_rb = false
+				{var _layer = "sequences";
+				var _seq = layer_sequence_create(_layer, obj_player_ram.x, obj_player_ram.y, seq_progress_1);
+		
+					layer_sequence_play(_seq);
+					layer_sequence_destroy(_seq);
+					obj_player_ram.has_clicked_rb = true;
+				}
+				*/
+	
+	
 			if array_contains(inv, global.item_list.rocket_window)
 			//inv selected item equals rocket body and rocket window exists in inventory, then "combine" the objects into the new sprite
 			{
 			array_delete(inv, selected_item, 1);
+			score +=10;
+			audio_play_sound(snd_item_get, 8, false);
 			array_insert(inv, selected_item, global.item_list.rocket_body_window); // "combines" the objects visually, replaces it with the new sprite
 			array_delete(inv, array_get_index(inv, global.item_list.rocket_window), 1);
 			}
@@ -55,6 +68,8 @@ rocket_window: new create_item(
 			
 			{
 			array_delete(inv, selected_item, 1);
+			score +=10;
+			audio_play_sound(snd_item_get, 8, false);
 			array_insert(inv, selected_item, global.item_list.rocket_body_window);
 			array_delete(inv, array_get_index(inv, global.item_list.rocket_body), 1);
 			}
@@ -84,6 +99,8 @@ rocket_left_wing: new create_item(
 			
 			{
 			array_delete(inv, selected_item, 1);
+			score +=10;
+			audio_play_sound(snd_item_get, 8, false);
 			array_insert(inv, selected_item, global.item_list.rocket_body_window_wing);
 			array_delete(inv, array_get_index(inv, global.item_list.rocket_body_window), 1);
 			}
@@ -111,6 +128,8 @@ rocket_engine: new create_item(
 			
 			{
 			array_delete(inv, selected_item, 1);
+			score +=10;
+			audio_play_sound(snd_item_get, 8, false);
 			array_insert(inv, selected_item, global.item_list.rocket_body_window_wing_engine);
 			array_delete(inv, array_get_index(inv, global.item_list.rocket_body_window_wing), 1);
 			}
@@ -140,6 +159,8 @@ rocket_right_wing: new create_item(
 			
 			{
 			array_delete(inv, selected_item, 1);
+			score +=10;
+			audio_play_sound(snd_item_get, 8, false);
 			array_insert(inv, selected_item, global.item_list.rocket_body_window_wing_engine_wing);
 			array_delete(inv, array_get_index(inv, global.item_list.rocket_body_window_wing_engine), 1);
 			}
@@ -157,9 +178,9 @@ rocket_body_window_wing_engine_wing: new create_item(
 
 rocket_cone: new create_item(
 		
-		"Partial Rocket: 2/6",
-		"The Rocket Body and Window.",
-		spr_rocket_body_window,
+		"Rocket Cone",
+		"The Rocket Cone. Click to Combine!",
+		spr_rocket_cone,
 		false,
 		function () 
 		{
@@ -167,6 +188,8 @@ rocket_cone: new create_item(
 			
 			{
 			array_delete(inv, selected_item, 1);
+			score +=10;
+			audio_play_sound(snd_item_get, 8, false);
 			array_insert(inv, selected_item, global.item_list.rocket_complete);
 			array_delete(inv, array_get_index(inv, global.item_list.rocket_body_window_wing_engine_wing), 1);
 			}
@@ -175,9 +198,9 @@ rocket_cone: new create_item(
 		
 rocket_complete: new create_item(
 		
-		"Partial Rocket: 2/6",
-		"The Rocket Body and Window.",
-		spr_rocket_body_window,
+		"Completed Rocket: 6/6",
+		"The Completed Rocket!",
+		spr_rocket_complete,
 		false,
 		function () {}
 		),	
@@ -191,6 +214,8 @@ ladder: new create_item(
 	false, //cannot drop this item
 	function ()
 	{
+
+		
 		var _used = false; //makes it a single-use item
 		if instance_exists(obj_ivy_wall_block) //check to see if there are any of these in the room
 			{

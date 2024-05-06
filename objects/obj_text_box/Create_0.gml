@@ -18,6 +18,7 @@ text_box_y = 0;
 //added to try and fix text alignment
 
 
+
 //text
 page = 0;
 page_number = 0; //variables have to be initalized in the create event
@@ -46,3 +47,6 @@ scr_set_defaults_for_text();
 last_free_space = 0; //keeps track of where the last word ends
 text_pause_timer = 0;
 text_pause_time = 16;
+
+//trying to get only one text box to appear
+exists = false;

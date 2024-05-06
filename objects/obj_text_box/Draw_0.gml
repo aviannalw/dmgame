@@ -1,5 +1,6 @@
-accept_key = keyboard_check_pressed(vk_space); //could also set to a specific key ( ord("E") )
 
+accept_key = keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_left); //could also set to a specific key ( ord("E") )
+is_typing = false;
 text_box_x = camera_get_view_x(view_camera[0]);//we're placing the text box
 text_box_y = camera_get_view_y(view_camera[0]) + 144; //dialogue box will be 12 px from the top
 
@@ -109,6 +110,7 @@ if text_pause_timer <= 0
 
 if accept_key //if spacebar is pressed...
 	{
+		obj_player_ram.movespeed = 0;
 		//if the typing is done, go to next page
 		if draw_char == text_length[page] //page has been fully typed
 		{
@@ -117,6 +119,7 @@ if accept_key //if spacebar is pressed...
 				{
 					page++;
 					draw_char = 0;
+					
 				}
 				else //destroy text box after all pages have been read
 					{
@@ -136,6 +139,7 @@ if accept_key //if spacebar is pressed...
 	}
 
 //------------------------------------------------draw the textbox---------------------------------------------//
+//	obj_player_ram.current_state = move_state.FREEZE;
 	//i think these four lines are redundant
 	draw_set_font(fnt_font_zig);
 	draw_set_color(c_white);
@@ -181,9 +185,10 @@ if (draw_char == text_length[page]) && (page == page_number -1) //if we're on th
 	//draw the text
 for (var c = 0; c < draw_char; c++)
 {
-	// creates a square cursor target draw_text(mouse_x, mouse_y, char[c, page]);
+	/*creates a square cursor target*/ draw_text(mouse_x, mouse_y, char[c, page]);
 //	draw_text(char_x[c, page] + text_box_spr_w/2, char_y[c, page] + text_box_spr_h/2, char[c, page]);
 	draw_text_ext(text_box_x + text_x_offset[page] + border, text_box_y + border, string_copy(text[page], 1, draw_char), line_sep, line_width);
 //i think i need to do something with the viewport here
 	
 }
+

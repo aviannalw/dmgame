@@ -1,3 +1,12 @@
+if lives <= 0 && !audio_is_playing(snd_game_over)	{audio_play_sound(snd_game_over, 10, false); room_goto(end_screen_room);}
+if instance_exists(obj_text_box)
+{exit;}
+else {
+/*switch current_state {
+
+case"move_state.MOVE":
+*/
+movespeed = 1;
 rightkey = keyboard_check(vk_right); //check the keyboard for a specific button being pressed, vk_right is a variable already set up by gamemaker, means right arrow key
 //function checks if right arrow key is being pressed, 1 is yes, 0 if no
 leftkey = keyboard_check(vk_left);
@@ -47,8 +56,5 @@ y += yspeed;
 
 //animate
 if xspeed == 0 && yspeed == 0 
-	{ image_index = 0; };
-	
-	
-
-
+	{ image_index = 0; }
+}

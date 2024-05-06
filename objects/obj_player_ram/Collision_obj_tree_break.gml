@@ -1,0 +1,2 @@
+movespeed = 0;
+
