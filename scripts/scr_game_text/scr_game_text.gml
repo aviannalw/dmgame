@@ -48,7 +48,7 @@ switch(_text_id) {
 		scr_text("Use the arrow keys or 'W', 'A', 'S', 'D' to move.");
 		scr_text("Walk over items to pick them up.");
 		scr_text("Click on items or characters to interact with them.");
-		scr_text("Use the mouse, spacebar, or enter key to select text options.");
+		scr_text("Use the mouse, spacebar, or enter key and the arrow keys to select text options.");
 		scr_text("Press 'P' to pause the game.");
 		scr_text("Would you like to hear it again?");
 		scr_option("I'm good", "no tutorial");
@@ -127,6 +127,7 @@ switch(_text_id) {
 			obj_speak_block.is_typing = false;
 		break;
 		case"mechanic - telescope":
+		score +=10; audio_play_sound(snd_item_get, 8, false);
 			scr_text("Thanks. That's really helpful.");
 			scr_text("Well, let me get you settled. One second and I'll engrave this rocket body for you.");
 			scr_text("Here you go!");
@@ -138,6 +139,11 @@ switch(_text_id) {
 				mechanic_count ++;
 			}
 		obj_speak_block.is_typing = false;//make mouse input work again
+		instance_activate_object(inst_5167C0DC); //activate the level 1 complete message
+		break;
+		
+		case"level 1 finish":
+		scr_text("You described your data for someone else and how much will be shared. You also mentioned necessary equipment. Terrific!");
 		break;
 		
 		case"mechanic thanks":
@@ -179,6 +185,7 @@ switch(_text_id) {
 		break;
 		
 		case"look":
+		score +=10; audio_play_sound(snd_item_get, 8, false);
 		scr_text("...");
 		scr_text("...... :)");
 		scr_text("Oh, I get it! You're building a rocket ship. You'll need this thing then.");
@@ -188,6 +195,9 @@ switch(_text_id) {
 				talked_to_runner = true;
 				runner_count ++;
 				obj_speak_block.is_typing = false;}
+				instance_activate_object(inst_4D02E439); //the second runner case, thank you message
+				instance_deactivate_object(inst_7A37C969);//delete this runner
+				instance_activate_object(inst_68E30323); //activate level 2 finish message
 		break;
 		
 		case"no way":
@@ -195,8 +205,21 @@ switch(_text_id) {
 		obj_speak_block.is_typing = false;
 		break;
 		
+		case"runner thanks":
+		scr_text("Thanks for telling me where to find your data. It's nice to know I could do what you did too.");
+		break;
+		
+		case"level 2 finish":
+		scr_text("You told someone what they need to access your data for reuse. Good job!");
+		break;
 		
 //--------------LEVEL 3-----------------//
+
+		case"tree without axe":
+		scr_text("You don't have an axe...");
+		obj_speak_block.is_typing = false;
+		break;
+
 		case"clue 1":
 		scr_text("Clue 1: Data standards ensure the pieces of the plan work together, like bolts on a rocket ship.");
 		scr_text("Find the next clue in the northern flower field");

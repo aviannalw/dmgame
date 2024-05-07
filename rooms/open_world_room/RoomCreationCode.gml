@@ -1,2 +1,1 @@
-obj_player_ram.score = score;
-
+//obj_player_ram.score = score;

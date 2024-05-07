@@ -1,12 +1,13 @@
-//for testing purposes
-if keyboard_check_pressed(ord("L")) {lives --;}
-if lives <= 0 && !audio_is_playing(snd_game_over)	{audio_play_sound(snd_game_over, 10, false); room_goto(end_screen_room);}
+//get rid of tree message if have axe
+if array_contains(inv, global.item_list.axe)
+{ instance_deactivate_object(inst_400A9B92); instance_deactivate_object(inst_6C11F009); instance_deactivate_object(inst_7591C6BA); instance_deactivate_object(inst_6B9059F9);}
+if lives <= 0 && (room != lab_room && !audio_is_playing(snd_game_over)) {audio_play_sound(snd_game_over, 10, false); obj_player_ram. x = 144; obj_player_ram.y = 118; room_goto(end_screen_room);}
 if instance_exists(obj_text_box)
 {exit;}
 else {
 /*switch current_state {
 
-case"move_state.MOVE":
+case"move_state.MOVE": 
 */
 movespeed = 1;
 rightkey = keyboard_check(vk_right) || keyboard_check(ord("D"));//check the keyboard for a specific button being pressed, vk_right is a variable already set up by gamemaker, means right arrow key
@@ -26,7 +27,7 @@ if instance_exists(obj_pause_object) //makes the player pause when it hits the o
 	}
 
 //set sprite
-mask_index = sprite[DOWN]; //the mask on the down sprite will aply to all sprites
+mask_index = sprite[DOWN]; //the mask on the down sprite will apply to all sprites
 if yspeed == 0 
 	{
 		if xspeed > 0 {face = RIGHT};
