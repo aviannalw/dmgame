@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Object13",
+  "name": "obj_game_title",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],

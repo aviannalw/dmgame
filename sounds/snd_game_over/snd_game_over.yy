@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "snd_game_over",
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "audio_sfx",
+    "path": "audiogroups/audio_sfx",
   },
   "bitDepth": 1,
   "bitRate": 128,

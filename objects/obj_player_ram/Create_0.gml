@@ -1,11 +1,8 @@
 xspeed = 0;
 yspeed = 0;
 movespeed = 1;
+
 lives = 3;
-
-score = 0;
-
-
 
 sprite[RIGHT] = spr_ram_right; //an array has brackets, starts at 0 because RIGHT does and arrays start at 0
 sprite[UP] = spr_ram_up;
@@ -24,11 +21,21 @@ has_piece_1 = false;
 instance_deactivate_object(inst_6D7DD6CC);
 //hide the mechanic thanks
 instance_deactivate_object(inst_232FC494);
+//hide level 1 finish message
+instance_deactivate_object(inst_5167C0DC);
 //hide the axe
 instance_deactivate_object(inst_1A4EB7F9);
 
+
+
+
 //hide the window
 instance_deactivate_object(inst_100EB070);
+// hide the runner thanks
+instance_deactivate_object(inst_4D02E439);
+//hide level 2 finish message
+instance_deactivate_object(inst_68E30323);
+
 
 //hide the engine
 instance_deactivate_object(inst_7EC8DACA);
