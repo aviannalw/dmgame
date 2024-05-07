@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_game_over",
+  "name": "spr_game_over_you_win",
   "bbox_bottom": 15,
   "bbox_left": 0,
   "bbox_right": 124,
@@ -14,6 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3dc25ccc-8698-4e7b-b696-550e6e68c968",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"113dc034-0f25-453c-a970-c4cf6eca215d",},
   ],
   "gridX": 1,
   "gridY": 1,
@@ -32,7 +33,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_game_over",
+    "name": "spr_game_over_you_win",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -43,7 +44,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 2.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -54,7 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3dc25ccc-8698-4e7b-b696-550e6e68c968","path":"sprites/spr_game_over/spr_game_over.yy",},},},"Disabled":false,"id":"f044b2b6-29fb-4919-bda2-27047d6b6d79","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3dc25ccc-8698-4e7b-b696-550e6e68c968","path":"sprites/spr_game_over_you_win/spr_game_over_you_win.yy",},},},"Disabled":false,"id":"f044b2b6-29fb-4919-bda2-27047d6b6d79","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"113dc034-0f25-453c-a970-c4cf6eca215d","path":"sprites/spr_game_over_you_win/spr_game_over_you_win.yy",},},},"Disabled":false,"id":"9acf535b-6505-4554-82ad-6c82fc8755f8","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

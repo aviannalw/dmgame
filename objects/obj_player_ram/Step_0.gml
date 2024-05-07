@@ -1,7 +1,22 @@
 //get rid of tree message if have axe
 if array_contains(inv, global.item_list.axe)
 { instance_deactivate_object(inst_400A9B92); instance_deactivate_object(inst_6C11F009); instance_deactivate_object(inst_7591C6BA); instance_deactivate_object(inst_6B9059F9);}
-if lives <= 0 && (room != lab_room && !audio_is_playing(snd_game_over)) {audio_play_sound(snd_game_over, 10, false); obj_player_ram. x = 144; obj_player_ram.y = 118; room_goto(end_screen_room);}
+
+//game over conditions
+//for testing purposes
+if keyboard_check_pressed(ord("L")) {lives-=1;}
+if lives <= 0 && !audio_is_playing(snd_game_over) 
+{
+	audio_play_sound(snd_game_over, 10, false); //play game over sound
+	array_delete(inv, 0, 10); //delete player items
+	obj_player_ram. x = 144; 
+	obj_player_ram.y = 118;
+	room_goto(end_screen_room);
+	}
+
+
+
+
 if instance_exists(obj_text_box)
 {exit;}
 else {
