@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rocket_piece",
-    "path": "sprites/spr_rocket_piece/spr_rocket_piece.yy",
+    "name": "spr_overworld_item_icons",
+    "path": "sprites/spr_overworld_item_icons/spr_overworld_item_icons.yy",
   },
   "spriteMaskId": null,
   "visible": true,

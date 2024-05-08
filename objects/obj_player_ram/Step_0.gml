@@ -1,3 +1,8 @@
+if array_contains(inv, global.item_list.rocket_cone) || array_contains(inv, global.item_list.rocket_complete) && can_win = true
+{ inst_64461DCD.image_index = 1;}
+
+
+
 //get rid of tree message if have axe
 if array_contains(inv, global.item_list.axe)
 { instance_deactivate_object(inst_400A9B92); instance_deactivate_object(inst_6C11F009); instance_deactivate_object(inst_7591C6BA); instance_deactivate_object(inst_6B9059F9);}

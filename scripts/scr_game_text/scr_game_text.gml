@@ -12,7 +12,9 @@ inv = obj_item_manager.inv;
 clue_1_appeared = false;
 clue_2_appeared = false;
 clue_3_appeared = false;
-
+finished_rpapers = false;
+finished_lpapers = false;
+can_win = false;
 if obj_text_box.exists = false {
 
 switch(_text_id) {
@@ -143,7 +145,8 @@ switch(_text_id) {
 		break;
 		
 		case"level 1 finish":
-		scr_text("You described your data for someone else and how much will be shared. You also mentioned necessary equipment. Terrific!");
+		scr_text("You described your data for someone else and how much will be shared.");
+		scr_text(" You also mentioned necessary equipment. Terrific!");
 		break;
 		
 		case"mechanic thanks":
@@ -206,7 +209,7 @@ switch(_text_id) {
 		break;
 		
 		case"runner thanks":
-		scr_text("Thanks for telling me where to find your data. It's nice to know I could do what you did too.");
+		scr_text("Thanks for telling me where to find your data. It's nice to know I could do what you did.");
 		break;
 		
 		case"level 2 finish":
@@ -222,7 +225,7 @@ switch(_text_id) {
 
 		case"clue 1":
 		scr_text("Clue 1: Data standards ensure the pieces of the plan work together, like bolts on a rocket ship.");
-		scr_text("Find the next clue in the northern flower field");
+		scr_text("Find the next clue in the northern flower field.");
 		clue_1_appeared = true;
 		if clue_1_appeared == true {instance_activate_object(inst_127BC255);}
 		break;
@@ -391,17 +394,83 @@ switch(_text_id) {
 		break;
 		
 		case"listen gov guy":
-		scr_text("here is what i have to say");
+		scr_text("You have space data, right? Yeah, of course you do.");
+		scr_text("Interspecies data gets a little complicated with consent forms, but we can skip that.");
+		scr_text("I've heard you selected repository planet 3.");
+		scr_text("Good choice, but there are intergalactic laws between this planet and that one."); 
+		scr_option("What are they?", "what");
+		break;
+		
+		case"what":
+		scr_text("I'm not gonna sit here and tell them to you. No. Read, that's your job.");
+		scr_text("Talk to me after you're done.");
+		instance_activate_object(inst_45D413FD);
 		obj_speak_block.is_typing = false;
 		break;
+		
+		case"restriction papers":
+		scr_text("You start on the restriction papers.");
+		scr_text("...");
+		scr_text("......");
+		scr_text(".........");
+		scr_text("...");
+		score +=10; audio_play_sound(snd_item_get, 8, false);
+		scr_text("You finish reading the restriction papers. That was long!");
+		instance_deactivate_object(inst_45D413FD); //deactivate the papers
+		finished_rpapers = true;
+		if finished_rpapers == true {
+		//deactivate the pervious version of the gov guy and activate the new one
+		instance_deactivate_object(inst_25DEA10D); //original gov guy
+		instance_activate_object(inst_78CF365B);} //gov guy after rpapers
+		break;
+		
+		case"gov guy after rpapers":
+		scr_text("What?");
+		scr_text("Oh, you've finished. Here's the license agreement. Yes, you have to read it.");
+		instance_activate_object(inst_612FC217);
+		break;
+			
+		case"license agreement":
+		scr_text("You start on the license agreement.");
+		scr_text("...");
+		scr_text("......");
+		score +=10; audio_play_sound(snd_item_get, 8, false);
+		scr_text("You finish reading the license agreement. That wasn't so bad.");
+		instance_deactivate_object(inst_612FC217); //deactivate the papers
+		finished_lpapers = true;
+		if finished_lpapers == true
+		{
+		//deactivate the pervious version of the gov guy and activate the new one
+		instance_deactivate_object(inst_78CF365B); //gov guy rpapers
+		instance_activate_object(inst_47946D97); //gov guy lpapers
+		}
+		break;
+		
+		case"gov guy after lpapers":
+		scr_text("Well, everything seems to be in order.");
+		scr_text("I'll send you on your way with this rocket piece. Oh, and there's a ladder by the cooler.");
+		scr_text("You're gonna need it.");
+		if finished_lpapers == true && finished_rpapers == true
+		{
+		instance_activate_object(inst_48F45D68); //activate the rocket piece
 		//activate ladder
 		instance_activate_object(inst_6DE0E3D7);
+		}
+		break;
+		
+		
+		//I haven't gottne the activation and deactivation of these objects and speakers right yet i should look at what i did for the mechanic think case
+		//the obejcts should be deactivated in the player create event and activated here in text
+		//maybe i need to delete them instead of deactivate when I'm finished?
+
+		
 		
 //--------------LEVEL 6-----------------//
 
 
 		case"astronaut 1":
-		scr_text("Hi, I'm astronaut 1.");
+		scr_text("Hi, I'm a grad student like you and a temporary replacement for the last pilot.");
+		scr_text("(When the grant money runs out, I'm gone...)");
 		scr_text("Pick me?");
 		scr_option("Yes", "astro 1 yes");
 		scr_option("No", "astro 1 no");
@@ -409,15 +478,18 @@ switch(_text_id) {
 		
 		case"astro 1 yes":
 		scr_text("Awesome!");
+		//play incorrect sound or lose a life sound
+			lives -=1;
 		break;
 		
 		case"astro 1 no":
-		scr_text("Alright.");
+		scr_text("Alright. I wouldn't be able to see the project to the end anyway.");
 		obj_speak_block.is_typing = false;
 		break;
 		
 		case"astronaut 2":
-		scr_text("Hi, I'm astronaut 2.");
+		scr_text("Hi, I'm a seasoned pilot, almost retired, actually.");
+		scr_text("Your PI is throwing a party for me next week.");
 		scr_text("Pick me?");
 		scr_option("Yes", "astro 2 yes");
 		scr_option("No", "astro 2 no");
@@ -425,15 +497,21 @@ switch(_text_id) {
 		
 		case"astro 2 yes":
 		scr_text("Great!");
+		//play lose life sound
+		lives -=1;
 		break;
 		
 		case"astro 2 no":
 		scr_text("That's fair.");
+		scr_text("I hope you'll come to my party, though.");
 		obj_speak_block.is_typing = false;
 		break;
 		
 		case"astronaut 3":
-		scr_text("Hi, I'm astronaut 3.");
+		scr_text("Hey, I remember you. Haven't seen you in the lab in a while.");
+		scr_text("I bet you've been busy with those rocket ship pieces.");
+		scr_text("I've actually been promoted to the data management plan board.");
+		scr_text("Yep, I know how to fly a plan home.")
 		scr_text("Pick me?");
 		scr_option("Yes", "astro 3 yes");
 		scr_option("No", "astro 3 no");
@@ -441,11 +519,14 @@ switch(_text_id) {
 		
 		case"astro 3 yes":
 		scr_text("It's an honor.");
+		score += 10;
+		can_win = true;
+		
 		break;
 		
 		case"astro 3 no":
 		scr_text("Some other time, then.");
-		obj_speak_block.is_typing = false; //this is here in case 3 isn't the right answer
+		obj_speak_block.is_typing = false; //this is here in case 3 isn't selected, which is wrong
 		break;
 		
 

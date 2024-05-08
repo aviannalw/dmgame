@@ -92,7 +92,7 @@ rocket_left_wing: new create_item(
 		
 		"Rocket Wing",
 		"The Left Wing of the Rocket. Click to Combine!",
-		spr_rocket_piece,
+		spr_rocket_wing,
 		false,
 		function () 
 		{
@@ -152,7 +152,7 @@ rocket_right_wing: new create_item(
 		
 		"Rocket Wing",
 		"The Right Wing of the Rocket. Click to Combine!",
-		spr_rocket_piece,
+		spr_rocket_wing,
 		false,
 		function () 
 		{
