@@ -48,5 +48,15 @@ instance_activate_object(inst_42635F0F);
 
 //hide the second ladder
 instance_deactivate_object(inst_6DE0E3D7);
+//hide the restriction papers
+instance_deactivate_object(inst_45D413FD);
+//hide rpapers guy
+instance_deactivate_object(inst_78CF365B);
+//hide the license agreement
+instance_deactivate_object(inst_612FC217);
+//hide lpapers guy
+instance_deactivate_object(inst_47946D97);
+//hide the right rocket wing
+instance_deactivate_object(inst_48F45D68);
 
 inv = obj_item_manager.inv;

@@ -106,7 +106,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5AEA7382","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_invisible_wall","path":"objects/obj_invisible_wall/obj_invisible_wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":13.875001,"x":283.0,"y":2.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_53EA5B9F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_invisible_wall","path":"objects/obj_invisible_wall/obj_invisible_wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":14.125001,"x":-10.0,"y":-2.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_43F0CA4A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_invisible_wall","path":"objects/obj_invisible_wall/obj_invisible_wall.yy",},"properties":[],"rotation":0.0,"scaleX":17.3125,"scaleY":1.0,"x":6.0,"y":211.0,},
-      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances_1","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5AD331B9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_pause_screen","path":"objects/obj_pause_screen/obj_pause_screen.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":0.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_A431DDE","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_warp_block","path":"objects/obj_warp_block/obj_warp_block.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":0.85937506,"x":242.0,"y":155.0,},
@@ -149,7 +149,7 @@
   "roomSettings": {
     "Height": 216,
     "inheritRoomSettings": false,
-    "persistent": false,
+    "persistent": true,
     "Width": 288,
   },
   "sequenceId": null,

@@ -10,9 +10,9 @@ draw_sprite(inv[i].sprite, 0, _xx + _sep*i, _yy ); //if you need to reference th
 //this would be really helpful for drawing lives remaining, since they remain persistent across screens.
 
 
-if selected_item == i {_col = c_yellow;
+if selected_item == i
+{	_col = c_yellow;
 	draw_rectangle_color(_xx - 1 + (_sep*i), _yy - 1, _xx + 9 + (_sep*i), _yy + 9, c_yellow, c_yellow, c_yellow, c_yellow, true);
-	
 	} //so we can tell the item we've selected is selected
 draw_set_color(_col);
 

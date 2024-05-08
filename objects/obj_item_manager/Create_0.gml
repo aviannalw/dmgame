@@ -3,6 +3,7 @@ depth = -9999;
 //structs are like objects, and they have their own variables
 has_pi_paper = false;
 has_blueprint = false;
+selected = false;
 //make an item constructor, which is a template
 function create_item(_name, _desc, _spr, _candrop, _effect) constructor //these are argument variables
 {
@@ -91,7 +92,7 @@ rocket_left_wing: new create_item(
 		
 		"Rocket Wing",
 		"The Left Wing of the Rocket. Click to Combine!",
-		spr_rocket_piece,
+		spr_rocket_wing,
 		false,
 		function () 
 		{
@@ -151,7 +152,7 @@ rocket_right_wing: new create_item(
 		
 		"Rocket Wing",
 		"The Right Wing of the Rocket. Click to Combine!",
-		spr_rocket_piece,
+		spr_rocket_wing,
 		false,
 		function () 
 		{
