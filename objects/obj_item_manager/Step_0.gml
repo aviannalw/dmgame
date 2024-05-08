@@ -12,13 +12,19 @@ if mouse_x > _xx && mouse_x < _xx+8 && mouse_y > _yy && mouse_y < _yy+8 //8 has 
 		selected_item = i;
 		
 	}
+if keyboard_(ord(string(i+1))) && selected = false
+{selected_item = i;
+	selected = true} else if selected = true
 }
+
+
 
 //useful to make the selected item effect happen
 if selected_item != -1 //makes sure something is selected
 {
 	//use an item with the effect
-	if mouse_check_button_pressed(mb_left) //could also use keyboard
+	if mouse_check_button_pressed(mb_left) 
+	|| ( (keyboard_check_released(ord("E"))) && selected_item != global.item_list.blueprint && selected_item != global.item_list.pi_paper )//could also use keyboard
 		{
 			inv[selected_item].effect(); //does the effect
 		}

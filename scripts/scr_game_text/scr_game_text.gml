@@ -47,7 +47,7 @@ switch(_text_id) {
 		case"yes tutorial":
 		scr_text("Use the arrow keys or 'W', 'A', 'S', 'D' to move.");
 		scr_text("Walk over items to pick them up.");
-		scr_text("Click on items or characters to interact with them.");
+		scr_text("Click or use 'E' to interact with items and characters.");
 		scr_text("Use the mouse, spacebar, or enter key and the arrow keys to select text options.");
 		scr_text("Press 'P' to pause the game.");
 		scr_text("Would you like to hear it again?");

@@ -3,6 +3,7 @@ depth = -9999;
 //structs are like objects, and they have their own variables
 has_pi_paper = false;
 has_blueprint = false;
+selected = false;
 //make an item constructor, which is a template
 function create_item(_name, _desc, _spr, _candrop, _effect) constructor //these are argument variables
 {
