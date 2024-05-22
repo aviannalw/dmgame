@@ -1,17 +1,17 @@
-if array_contains(inv, global.item_list.rocket_cone) || array_contains(inv, global.item_list.rocket_complete) && can_win = true
-{ inst_64461DCD.image_index = 1;}
-
-
+if array_contains(inv, global.item_list.rocket_complete) && can_win = true
+{ inst_64461DCD.image_index = 1;
+	array_delete(inv, 10, 10);} //changing the launchpad sprite and removing the inventory
 
 //get rid of tree message if have axe
 if array_contains(inv, global.item_list.axe)
 { instance_deactivate_object(inst_400A9B92); instance_deactivate_object(inst_6C11F009); instance_deactivate_object(inst_7591C6BA); instance_deactivate_object(inst_6B9059F9);}
 
+
 //game over conditions
-//for testing purposes
-if keyboard_check_pressed(ord("L")) {lives-=1;}
+
 if lives <= 0 && !audio_is_playing(snd_game_over) 
 {
+	
 	audio_play_sound(snd_game_over, 10, false); //play game over sound
 	array_delete(inv, 0, 10); //delete player items
 	obj_player_ram. x = 144; 

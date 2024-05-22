@@ -83,6 +83,7 @@ switch(_text_id) {
 		break;
 		case"mechanic - moon data":
 			lives -=1;
+			audio_play_sound(snd_lose_life, 8, false);
 			scr_text("Are you sure about that?");
 			scr_text("What kind of data do you have?");
 			scr_option("moon data", "mechanic - moon data")
@@ -103,6 +104,7 @@ switch(_text_id) {
 		break;
 		case"mechanic - butt-ton":
 			lives -=1;
+			audio_play_sound(snd_lose_life, 8, false);
 			scr_text("Wow! Good luck with that! But I think that's too much for your rocket.");
 			obj_speak_block.is_typing = false;
 		break;
@@ -146,7 +148,7 @@ switch(_text_id) {
 		
 		case"level 1 finish":
 		scr_text("You described your data for someone else and how much will be shared.");
-		scr_text(" You also mentioned necessary equipment. Terrific!");
+		scr_text("You also mentioned necessary equipment. Terrific!");
 		break;
 		
 		case"mechanic thanks":
@@ -222,6 +224,11 @@ switch(_text_id) {
 		scr_text("You don't have an axe...");
 		obj_speak_block.is_typing = false;
 		break;
+		
+		case"cliff without ladder":
+		scr_text("You don't have a ladder...");
+		obj_speak_block.is_typing = false;
+		break;
 
 		case"clue 1":
 		scr_text("Clue 1: Data standards ensure the pieces of the plan work together, like bolts on a rocket ship.");
@@ -239,6 +246,7 @@ switch(_text_id) {
 		
 			case"generated":
 			lives -=1;
+			audio_play_sound(snd_lose_life, 8, false);
 			scr_text("Think again!");
 					scr_text("Which is not an example of a data standard?");
 					scr_option("How data are generated", "generated");
@@ -249,6 +257,7 @@ switch(_text_id) {
 			
 			case"guidelines":
 			lives -=1;
+			audio_play_sound(snd_lose_life, 8, false);
 			scr_text("Nope!");
 					scr_text("Which is not an example of a data standard?");
 					scr_option("How data are generated", "generated");
@@ -261,6 +270,7 @@ switch(_text_id) {
 		correct = true;
 		if correct = true {
 			scr_text("That's correct!");
+			score +=10; audio_play_sound(snd_item_get, 8, false);
 			scr_text("Find the next clue behind the lab");
 			instance_deactivate_object(inst_127BC255);
 			instance_activate_object(inst_1A4EB7F9); //show the axe
@@ -275,12 +285,22 @@ switch(_text_id) {
 		scr_text("In that case, document your work!");
 		scr_text("now get cutting.");
 		scr_text("I think I saw a rocket wing in the trees...");
-		clue_3_appeared = true;
-		if clue_3_appeared == true {instance_activate_object(inst_5EE4A6E0); instance_activate_object(inst_AB7EA7D); /*the ladder too*/ }
+			instance_activate_object(inst_5EE4A6E0); 
+			instance_activate_object(inst_AB7EA7D); /*the ladder too*/ 
+			instance_activate_object(inst_42C3C689); //and the message
+			instance_activate_object(inst_FDA092F); //and the wing message
 		break;
 		
 		case"clue 4":
 		scr_text("does that tree look funny to you?");
+		break;
+		
+		case"ladder pickup":
+		scr_text("You found a ladder.");
+		break;
+		
+		case"level 3 summary":
+			scr_text("You learned about data standards and found another rocket piece!");
 		break;
 		
 //--------------LEVEL 4-----------------//	
@@ -340,6 +360,8 @@ switch(_text_id) {
 		
 		case"planet_3 selected":
 		scr_text("Great choice!");
+		score +=10;
+		audio_play_sound(snd_item_get, 8, false);
 		scr_text("Exit the telescope and collect the rocket thruster.");
 		obj_speak_block.is_typing = false;
 		instance_activate_object(inst_7EC8DACA);
@@ -404,7 +426,7 @@ switch(_text_id) {
 		case"what":
 		scr_text("I'm not gonna sit here and tell them to you. No. Read, that's your job.");
 		scr_text("Talk to me after you're done.");
-		instance_activate_object(inst_45D413FD);
+		instance_activate_object(inst_restriction);
 		obj_speak_block.is_typing = false;
 		break;
 		
@@ -416,18 +438,18 @@ switch(_text_id) {
 		scr_text("...");
 		score +=10; audio_play_sound(snd_item_get, 8, false);
 		scr_text("You finish reading the restriction papers. That was long!");
-		instance_deactivate_object(inst_45D413FD); //deactivate the papers
+		instance_deactivate_object(inst_restriction); //deactivate the papers
 		finished_rpapers = true;
 		if finished_rpapers == true {
 		//deactivate the pervious version of the gov guy and activate the new one
-		instance_deactivate_object(inst_25DEA10D); //original gov guy
-		instance_activate_object(inst_78CF365B);} //gov guy after rpapers
+		instance_deactivate_object(inst_gov_guy); //original gov guy
+		instance_activate_object(inst_guy_after_restriction);} //gov guy after rpapers
 		break;
 		
 		case"gov guy after rpapers":
 		scr_text("What?");
 		scr_text("Oh, you've finished. Here's the license agreement. Yes, you have to read it.");
-		instance_activate_object(inst_612FC217);
+		instance_activate_object(inst_license);
 		break;
 			
 		case"license agreement":
@@ -436,13 +458,13 @@ switch(_text_id) {
 		scr_text("......");
 		score +=10; audio_play_sound(snd_item_get, 8, false);
 		scr_text("You finish reading the license agreement. That wasn't so bad.");
-		instance_deactivate_object(inst_612FC217); //deactivate the papers
+		instance_deactivate_object(inst_license); //deactivate the papers
 		finished_lpapers = true;
 		if finished_lpapers == true
 		{
 		//deactivate the pervious version of the gov guy and activate the new one
-		instance_deactivate_object(inst_78CF365B); //gov guy rpapers
-		instance_activate_object(inst_47946D97); //gov guy lpapers
+		instance_deactivate_object(inst_guy_after_restriction); //gov guy rpapers
+		instance_activate_object(inst_guy_after_license); //gov guy lpapers
 		}
 		break;
 		
@@ -450,12 +472,9 @@ switch(_text_id) {
 		scr_text("Well, everything seems to be in order.");
 		scr_text("I'll send you on your way with this rocket piece. Oh, and there's a ladder by the cooler.");
 		scr_text("You're gonna need it.");
-		if finished_lpapers == true && finished_rpapers == true
-		{
-		instance_activate_object(inst_48F45D68); //activate the rocket piece
+		instance_activate_object(inst_right_wing); //activate the rocket piece
 		//activate ladder
 		instance_activate_object(inst_6DE0E3D7);
-		}
 		break;
 		
 		
@@ -480,6 +499,7 @@ switch(_text_id) {
 		scr_text("Awesome!");
 		//play incorrect sound or lose a life sound
 			lives -=1;
+			audio_play_sound(snd_lose_life, 8, false);
 		break;
 		
 		case"astro 1 no":
@@ -499,6 +519,7 @@ switch(_text_id) {
 		scr_text("Great!");
 		//play lose life sound
 		lives -=1;
+		audio_play_sound(snd_lose_life, 8, false);
 		break;
 		
 		case"astro 2 no":
@@ -519,9 +540,13 @@ switch(_text_id) {
 		
 		case"astro 3 yes":
 		scr_text("It's an honor.");
-		score += 10;
+		score += 10;  audio_play_sound(snd_item_get, 8, false);
 		can_win = true;
-		
+		//activate the rocket cone
+		instance_activate_object(inst_3507286B);
+		instance_activate_object(inst_441D2CE7);
+	//	instance_deactivate_object(inst_no_rocket);
+		instance_activate_object(inst_rocket_ready);
 		break;
 		
 		case"astro 3 no":
@@ -529,6 +554,59 @@ switch(_text_id) {
 		obj_speak_block.is_typing = false; //this is here in case 3 isn't selected, which is wrong
 		break;
 		
+		case"rocket add":
+			scr_text("Congratulations! You chose a pilot that will ensure project sustainability...");
+			scr_text("and collected all six pieces of the rocket!");
+			scr_text("Click on the pieces to combine them in your inventory, and then it's blast off!");
+		break;
+		
+		
+		case"launchpad rocket ready":
+		scr_text("Add your rocket to the launchpad?");
+		scr_option("Add rocket", "place rocket");
+		scr_option("Not yet", "not yet");
+		obj_speak_block.is_typing = false;
+		break;
+		
+		
+		case"place rocket":
+		if !array_contains(inv, global.item_list.rocket_complete)
+		{scr_text("You don't have a complete rocket yet...");
+			obj_speak_block.is_typing = false;
+			break;}
+		instance_deactivate_object(inst_rocket_ready);
+		instance_activate_object(inst_rocket_on);
+		array_delete(inv, 3, 1); //rocketship should be last anyway
+		scr_text("You readied the rocket for launch.");
+		obj_speak_block.is_typing = false;
+		break;
+		
+		case"not yet":
+		scr_text("You didn't add the rocket...");
+		obj_speak_block.is_typing = false;
+		break;
+		
+		case"launchpad rocket on":
+		scr_text("Launch your data mangement plan?");
+		obj_speak_block.is_typing = false;
+		scr_option("Launch it!", "launch yes");
+		scr_option("Actually...", "launch no");
+		break;
+		
+		case"launch yes":
+		//scr_text("Launch sequence initiated.");
+		array_delete(inv, 0, 10); //delete player items
+		instance_deactivate_object(inst_4670B8EA);
+		audio_play_sound(snd_rocket_launch, 8, false);
+		//rocket_launch = layer_sequence_create(sequences, 1345, 135, seq_rocket_launch);
+	//	if layer_sequence_is_finished(rocket_launch)
+		room_goto(win_room);
+		break;
+		
+		case"launch no":
+		obj_speak_block.is_typing = false;
+		scr_text("You decided to wait a little longer...");
+		break;
 
 	
 }

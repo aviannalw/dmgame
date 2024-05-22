@@ -8,7 +8,8 @@ line_sep = 12; //vertical separation between text lines
 line_width = text_box_width - border*2;
 text_box_spr = spr_text_box;
 text_box_img = 0;
-text_box_img_spd = 0; //if tex box is animated, change this number to frame speed/60, frame speed is in the image editor
+text_box_img_spd = 0; //if text box is animated, change this number to frame speed/60, frame speed is in the image editor
+text_x_offset = 12;
 
 //added to try and fix text alignment
 text_box_spr_w = 0; 
@@ -17,7 +18,7 @@ text_box_x = 0;
 text_box_y = 0;
 //added to try and fix text alignment
 
-
+is_typing = false;
 
 
 

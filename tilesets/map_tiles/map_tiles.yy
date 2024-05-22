@@ -15,10 +15,7 @@
     "name": "Tile Sets",
     "path": "folders/Tile Sets.yy",
   },
-  "spriteId": {
-    "name": "Sprite9",
-    "path": "sprites/Sprite9/Sprite9.yy",
-  },
+  "spriteId": null,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",

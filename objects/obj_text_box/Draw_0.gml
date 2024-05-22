@@ -122,7 +122,7 @@ if accept_key //if spacebar is pressed...
 					
 				}
 				else //destroy text box after all pages have been read
-					{
+					{ is_typing = false;
 						//link text for options
 						if option_number > 0
 						{

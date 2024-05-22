@@ -29,10 +29,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_menu_background",
-    "path": "sprites/spr_menu_background/spr_menu_background.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
