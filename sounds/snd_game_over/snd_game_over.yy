@@ -6,7 +6,7 @@
     "name": "audio_sfx",
     "path": "audiogroups/audio_sfx",
   },
-  "bitDepth": 1,
+  "bitDepth": 0,
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,

@@ -226,6 +226,7 @@ ladder: new create_item(
 					{
 						instance_destroy();
 						_used = true;
+						audio_play_sound(snd_item_get, 8, false);
 						score +=10;
 					}
 				}
@@ -253,6 +254,7 @@ axe: new create_item(
 					{
 						if distance_to_object(obj_player_ram) < 10 
 						{
+						audio_play_sound(snd_axe_cut, 8, false);
 						instance_destroy();
 						}
 					}

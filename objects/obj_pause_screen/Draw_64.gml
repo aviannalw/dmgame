@@ -6,8 +6,8 @@ switch (room)
 //----------------------LAB ROOM-----------------------//
 
 case lab_room:
-	draw_text(camera_get_view_x(view_camera[0]) + 222, camera_get_view_y(view_camera[0]) + 20, "SCORE: " + string(score));
-	draw_text(camera_get_view_x(view_camera[0]) + 222, camera_get_view_y(view_camera[0]) + 30, "LIVES: " + string(lives));
+	draw_text(camera_get_view_x(view_camera[0]) + 218, camera_get_view_y(view_camera[0]) + 20, "SCORE:" + string(score));
+	draw_text(camera_get_view_x(view_camera[0]) + 218, camera_get_view_y(view_camera[0]) + 30, "LIVES:" + string(lives));
 	var _xx = 85;
 	
 if paused == true
@@ -30,8 +30,8 @@ if paused == true
 			draw_set_alpha(0.5);
 			draw_rectangle_color(0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_black, c_black, c_black, c_black, false);
 			draw_set_alpha(1);
-				draw_text(camera_get_view_x(view_camera[0]) + 222, camera_get_view_y(view_camera[0]) + 20, "SCORE: " + string(score));
-				draw_text(camera_get_view_x(view_camera[0]) + 222, camera_get_view_y(view_camera[0]) + 30, "LIVES: " + string(lives));
+				draw_text(camera_get_view_x(view_camera[0]) + 218, camera_get_view_y(view_camera[0]) + 20, "SCORE:" + string(score));
+				draw_text(camera_get_view_x(view_camera[0]) + 218, camera_get_view_y(view_camera[0]) + 30, "LIVES:" + string(lives));
 				var _xx = 85;
 				repeat(lives)
 					{
@@ -64,8 +64,8 @@ if paused == true
 
 
 case open_world_room:
-	draw_text(222, 20, "SCORE: " + string(score));
-	draw_text(222, 30, "LIVES: " + string(lives));
+	draw_text(222, 20, "SCORE:" + string(score));
+	draw_text(222, 30, "LIVES:" + string(lives));
 	var _xx = 85;
 	repeat(lives)
 		{
@@ -92,8 +92,8 @@ if paused == true
 			draw_set_alpha(.5);
 			draw_rectangle_color(0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_black, c_black, c_black, c_black, false);
 			draw_set_alpha(1);
-				draw_text(222, 20, "SCORE: " + string(score));
-				draw_text(222, 30, "LIVES: " + string(lives));
+				draw_text(222, 20, "SCORE:" + string(score));
+				draw_text(222, 30, "LIVES:" + string(lives));
 				var _xx = 85;
 				
 			draw_set_halign(fa_center);
@@ -112,8 +112,8 @@ if paused == true
 		
 		
 case gov_room:
-	draw_text(222, 20, "SCORE: " + string(score));
-	draw_text(222, 30, "LIVES: " + string(lives));
+	draw_text(222, 20, "SCORE:" + string(score));
+	draw_text(222, 30, "LIVES:" + string(lives));
 	var _xx = 85;
 
 		
@@ -137,8 +137,8 @@ if paused == true
 			draw_set_alpha(.5);
 			draw_rectangle_color(0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_black, c_black, c_black, c_black, false);
 			draw_set_alpha(1);
-				draw_text(222, 20, "SCORE: " + string(score));
-				draw_text(222, 30, "LIVES: " + string(lives));
+				draw_text(222, 20, "SCORE:" + string(score));
+				draw_text(222, 30, "LIVES:" + string(lives));
 				var _xx = 85;
 		
 			draw_set_halign(fa_center);
@@ -157,8 +157,8 @@ if paused == true
 	
 
 case planet_room:
-	draw_text(camera_get_view_x(view_camera[0]) + 222, camera_get_view_y(view_camera[0]) + 20, "SCORE: " + string(score));
-	draw_text(camera_get_view_x(view_camera[0]) + 222, camera_get_view_y(view_camera[0]) + 30, "LIVES: " + string(lives));
+	draw_text(camera_get_view_x(view_camera[0]) + 218, camera_get_view_y(view_camera[0]) + 20, "SCORE:" + string(score));
+	draw_text(camera_get_view_x(view_camera[0]) + 218, camera_get_view_y(view_camera[0]) + 30, "LIVES:" + string(lives));
 	var _xx = 85;
 
 		
@@ -182,8 +182,8 @@ if paused == true
 			draw_set_alpha(0.5);
 			draw_rectangle_color(0, 0, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_black, c_black, c_black, c_black, false);
 			draw_set_alpha(1);
-				draw_text(camera_get_view_x(view_camera[0]) + 222, camera_get_view_y(view_camera[0]) + 20, "SCORE: " + string(score));
-				draw_text(camera_get_view_x(view_camera[0]) + 222, camera_get_view_y(view_camera[0]) + 30, "LIVES: " + string(lives));
+				draw_text(camera_get_view_x(view_camera[0]) + 218, camera_get_view_y(view_camera[0]) + 20, "SCORE:" + string(score));
+				draw_text(camera_get_view_x(view_camera[0]) + 218, camera_get_view_y(view_camera[0]) + 30, "LIVES:" + string(lives));
 				var _xx = 85;
 		
 			draw_set_halign(fa_center);
